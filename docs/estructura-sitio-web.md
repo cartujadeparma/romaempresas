@@ -169,6 +169,13 @@ páginas adicionales sin mostrarlas en el menú principal), y redes sociales.
 
 ## 6. Plantillas de página a desarrollar en el tema
 
+> **Actualización**: el tema elegido para la implementación es **Trucking
+> Services** (`wp-content/themes/trucking-services`), un tema de bloques
+> (Full Site Editing), no de plantillas PHP clásicas. La lista siguiente
+> describe la necesidad funcional de cada plantilla; su equivalente real en
+> Trucking Services (`front-page.html`, `page.html`, patrones de bloques,
+> etc.) está documentado en `docs/implementacion-wordpress.md`, sección 2.
+
 - `front-page.php` — Inicio.
 - `page-landing-seccion.php` — portadas de Nosotros, Servicios, Flota, Sectores, Seguridad y Operaciones, Contacto (grid hacia hijas).
 - `page-servicio.php` — subpáginas de Servicios.
@@ -181,12 +188,15 @@ páginas adicionales sin mostrarlas en el menú principal), y redes sociales.
 
 ## 7. Plugins sugeridos
 
-- **Advanced Custom Fields (ACF)** — campos personalizados para servicios, vehículos, sectores y testimonios.
-- **WPForms** o **Contact Form 7 + Flamingo** — formularios de cotización y contacto, con notificación por email.
+- ~~**WPForms** o **Contact Form 7**~~ — **resuelto**: se usa **Contact Form 7** (vendorizado en `wp-content/plugins/contact-form-7`, recomendado por el propio tema Trucking Services) para los formularios de cotización y contacto.
+- ~~Plugin de listado de blog~~ — **resuelto**: **Classic Blog Grid** (vendorizado, recomendado por el tema) para el listado de Blog/Noticias.
+- **Advanced Custom Fields (ACF)** — campos personalizados adicionales para servicios, vehículos, sectores y testimonios, más allá de los ya registrados por `wp-content/mu-plugins/roma-site-structure.php`.
 - **Click to Chat / WhatsApp Chat** — botón flotante y enlaces directos de WhatsApp.
 - **Yoast SEO** o **Rank Math** — metadatos, sitemap.xml, breadcrumbs, schema.org (`LocalBusiness`/`Organization`).
 - **WP Rocket** o **LiteSpeed Cache** (según hosting) — rendimiento.
 - **Google Maps embed** (o bloque nativo de Google Maps vía iframe) — página Ubicación.
+
+Detalle de activación e integración con el tema: ver `docs/implementacion-wordpress.md`.
 
 ## 8. Consideraciones adicionales
 
