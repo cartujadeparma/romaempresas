@@ -28,7 +28,7 @@ function roma_registrar_cpt_vehiculo() {
 				'not_found'     => 'No se encontraron vehículos',
 			),
 			'public'       => true,
-			'has_archive'  => 'flota',
+			'has_archive'  => 'flota/vehiculos',
 			'rewrite'      => array( 'slug' => 'flota/vehiculo' ),
 			'menu_icon'    => 'dashicons-car',
 			'supports'     => array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields' ),
