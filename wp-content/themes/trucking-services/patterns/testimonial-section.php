@@ -12,11 +12,11 @@
 <!-- wp:group {"metadata":{"name":"Testimonial Section"},"className":"testimonial-section","style":{"spacing":{"padding":{"right":"0px","left":"0px","bottom":"50px","top":"50px"},"margin":{"top":"0","bottom":"0"}},"border":{"radius":"15px"}},"gradient":"section-background","layout":{"type":"constrained","contentSize":"75%"}} -->
 <div class="wp-block-group testimonial-section has-section-background-gradient-background has-background" style="border-radius:15px;margin-top:0;margin-bottom:0;padding-top:50px;padding-right:0px;padding-bottom:50px;padding-left:0px"><!-- wp:group {"className":"test-head-box wow zoomIn","style":{"spacing":{"margin":{"bottom":"40px"}}},"layout":{"type":"constrained","contentSize":""}} -->
 <div class="wp-block-group test-head-box wow zoomIn" style="margin-bottom:40px"><!-- wp:heading {"textAlign":"center","className":"test-sec-title","style":{"typography":{"fontSize":"18px","textTransform":"capitalize","fontStyle":"normal","fontWeight":"600"},"elements":{"link":{"color":{"text":"var:preset|color|primary"}}}},"textColor":"primary","fontFamily":"poppins"} -->
-<h2 class="wp-block-heading has-text-align-center test-sec-title has-primary-color has-text-color has-link-color has-poppins-font-family" style="font-size:18px;font-style:normal;font-weight:600;text-transform:capitalize"><?php echo esc_html__( 'TESTIMONIALS', 'trucking-services' ); ?></h2>
+<h2 class="wp-block-heading has-text-align-center test-sec-title has-primary-color has-text-color has-link-color has-poppins-font-family" style="font-size:18px;font-style:normal;font-weight:600;text-transform:capitalize"><?php echo esc_html__( 'TESTIMONIOS', 'trucking-services' ); ?></h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center","className":"test-sec-desc","style":{"typography":{"fontSize":"22px","textTransform":"capitalize","fontStyle":"normal","fontWeight":"700"},"elements":{"link":{"color":{"text":"var:preset|color|secondary"}}},"spacing":{"margin":{"top":"12px"}}},"textColor":"secondary","fontFamily":"poppins"} -->
-<p class="has-text-align-center test-sec-desc has-secondary-color has-text-color has-link-color has-poppins-font-family" style="margin-top:12px;font-size:22px;font-style:normal;font-weight:700;text-transform:capitalize"><?php echo esc_html__( 'What Our Clients Are Saying', 'trucking-services' ); ?></p>
+<p class="has-text-align-center test-sec-desc has-secondary-color has-text-color has-link-color has-poppins-font-family" style="margin-top:12px;font-size:22px;font-style:normal;font-weight:700;text-transform:capitalize"><?php echo esc_html__( 'Lo que dicen nuestros clientes', 'trucking-services' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -32,17 +32,17 @@
 
 <!-- wp:group {"className":"test-content","style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|30"},"margin":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|20"}},"border":{"radius":"20px"}},"backgroundColor":"base","layout":{"type":"constrained","contentSize":""}} -->
 <div class="wp-block-group test-content has-base-background-color has-background" style="border-radius:20px;margin-top:var(--wp--preset--spacing--10);margin-bottom:var(--wp--preset--spacing--20);padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)"><!-- wp:paragraph {"className":"test-para","style":{"typography":{"fontSize":"16px","fontStyle":"normal","fontWeight":"400","lineHeight":"1.8"},"elements":{"link":{"color":{"text":"var:preset|color|secondary"}}}},"textColor":"secondary","fontFamily":"poppins"} -->
-<p class="test-para has-secondary-color has-text-color has-link-color has-poppins-font-family" style="font-size:16px;font-style:normal;font-weight:400;line-height:1.8"><?php echo esc_html__( 'Molestie odio inceptos adipiscing dui dictum. Sodales aptent hac tristique integer nullam in vestibulum. Hac feugiat placerat laoreet fames pharetra pede imperdiet sodales in.', 'trucking-services' ); ?></p>
+<p class="test-para has-secondary-color has-text-color has-link-color has-poppins-font-family" style="font-size:16px;font-style:normal;font-weight:400;line-height:1.8"><?php echo esc_html__( 'Inversiones & Transporte Roma cumple siempre con los tiempos de entrega acordados. La comunicación durante cada viaje nos da total tranquilidad con nuestra carga.', 'trucking-services' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:columns {"className":"test-author"} -->
 <div class="wp-block-columns test-author"><!-- wp:column {"width":"70%","className":"test-author-info"} -->
 <div class="wp-block-column test-author-info" style="flex-basis:70%"><!-- wp:paragraph {"className":"author-name","style":{"typography":{"fontSize":"16px","fontStyle":"normal","fontWeight":"600"}},"fontFamily":"poppins"} -->
-<p class="author-name has-poppins-font-family" style="font-size:16px;font-style:normal;font-weight:600"><?php echo esc_html__( 'David Harper', 'trucking-services' ); ?></p>
+<p class="author-name has-poppins-font-family" style="font-size:16px;font-style:normal;font-weight:600"><?php echo esc_html__( 'Carlos Medina', 'trucking-services' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"author-post","style":{"elements":{"link":{"color":{"text":"var:preset|color|secondary"}}},"typography":{"fontSize":"16px","fontStyle":"normal","fontWeight":"400"},"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"},"margin":{"top":"0","bottom":"0","left":"0","right":"0"}}},"textColor":"secondary","fontFamily":"poppins"} -->
-<p class="author-post has-secondary-color has-text-color has-link-color has-poppins-font-family" style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;font-size:16px;font-style:normal;font-weight:400"><?php echo esc_html__( 'Supply Chain Manager', 'trucking-services' ); ?></p>
+<p class="author-post has-secondary-color has-text-color has-link-color has-poppins-font-family" style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;font-size:16px;font-style:normal;font-weight:400"><?php echo esc_html__( 'Jefe de Cadena de Suministro', 'trucking-services' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
@@ -66,17 +66,17 @@
 
 <!-- wp:group {"className":"test-content","style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|30"},"margin":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|20"}},"border":{"radius":"20px"}},"backgroundColor":"base","layout":{"type":"constrained","contentSize":""}} -->
 <div class="wp-block-group test-content has-base-background-color has-background" style="border-radius:20px;margin-top:var(--wp--preset--spacing--10);margin-bottom:var(--wp--preset--spacing--20);padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)"><!-- wp:paragraph {"className":"test-para","style":{"typography":{"fontSize":"16px","fontStyle":"normal","fontWeight":"400","lineHeight":"1.8"},"elements":{"link":{"color":{"text":"var:preset|color|secondary"}}}},"textColor":"secondary","fontFamily":"poppins"} -->
-<p class="test-para has-secondary-color has-text-color has-link-color has-poppins-font-family" style="font-size:16px;font-style:normal;font-weight:400;line-height:1.8"><?php echo esc_html__( 'Molestie odio inceptos adipiscing dui dictum. Sodales aptent hac tristique integer nullam in vestibulum. Hac feugiat placerat laoreet fames pharetra pede imperdiet sodales in.', 'trucking-services' ); ?></p>
+<p class="test-para has-secondary-color has-text-color has-link-color has-poppins-font-family" style="font-size:16px;font-style:normal;font-weight:400;line-height:1.8"><?php echo esc_html__( 'La flota está en muy buen estado y los conductores son puntuales y profesionales. Confiamos en Roma para el transporte de nuestra carga desde hace varios años.', 'trucking-services' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:columns {"className":"test-author"} -->
 <div class="wp-block-columns test-author"><!-- wp:column {"width":"70%","className":"test-author-info"} -->
 <div class="wp-block-column test-author-info" style="flex-basis:70%"><!-- wp:paragraph {"className":"author-name","style":{"typography":{"fontSize":"16px","fontStyle":"normal","fontWeight":"600"}},"fontFamily":"poppins"} -->
-<p class="author-name has-poppins-font-family" style="font-size:16px;font-style:normal;font-weight:600"><?php echo esc_html__( 'Angela Curtis', 'trucking-services' ); ?></p>
+<p class="author-name has-poppins-font-family" style="font-size:16px;font-style:normal;font-weight:600"><?php echo esc_html__( 'Ana Quispe', 'trucking-services' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"author-post","style":{"elements":{"link":{"color":{"text":"var:preset|color|secondary"}}},"typography":{"fontSize":"16px","fontStyle":"normal","fontWeight":"400"},"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"},"margin":{"top":"0","bottom":"0","left":"0","right":"0"}}},"textColor":"secondary","fontFamily":"poppins"} -->
-<p class="author-post has-secondary-color has-text-color has-link-color has-poppins-font-family" style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;font-size:16px;font-style:normal;font-weight:400"><?php echo esc_html__( 'Operations Lead', 'trucking-services' ); ?></p>
+<p class="author-post has-secondary-color has-text-color has-link-color has-poppins-font-family" style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;font-size:16px;font-style:normal;font-weight:400"><?php echo esc_html__( 'Jefa de Operaciones', 'trucking-services' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
@@ -100,17 +100,17 @@
 
 <!-- wp:group {"className":"test-content","style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|30"},"margin":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|20"}},"border":{"radius":"20px"}},"backgroundColor":"base","layout":{"type":"constrained","contentSize":""}} -->
 <div class="wp-block-group test-content has-base-background-color has-background" style="border-radius:20px;margin-top:var(--wp--preset--spacing--10);margin-bottom:var(--wp--preset--spacing--20);padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)"><!-- wp:paragraph {"className":"test-para","style":{"typography":{"fontSize":"16px","fontStyle":"normal","fontWeight":"400","lineHeight":"1.8"},"elements":{"link":{"color":{"text":"var:preset|color|secondary"}}}},"textColor":"secondary","fontFamily":"poppins"} -->
-<p class="test-para has-secondary-color has-text-color has-link-color has-poppins-font-family" style="font-size:16px;font-style:normal;font-weight:400;line-height:1.8"><?php echo esc_html__( 'Molestie odio inceptos adipiscing dui dictum. Sodales aptent hac tristique integer nullam in vestibulum. Hac feugiat placerat laoreet fames pharetra pede imperdiet sodales in.', 'trucking-services' ); ?></p>
+<p class="test-para has-secondary-color has-text-color has-link-color has-poppins-font-family" style="font-size:16px;font-style:normal;font-weight:400;line-height:1.8"><?php echo esc_html__( 'El equipo de Roma nos brinda seguimiento constante de cada envío y responde rápido ante cualquier imprevisto. Un aliado clave para nuestra operación.', 'trucking-services' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:columns {"className":"test-author"} -->
 <div class="wp-block-columns test-author"><!-- wp:column {"width":"70%","className":"test-author-info"} -->
 <div class="wp-block-column test-author-info" style="flex-basis:70%"><!-- wp:paragraph {"className":"author-name","style":{"typography":{"fontSize":"16px","fontStyle":"normal","fontWeight":"600"}},"fontFamily":"poppins"} -->
-<p class="author-name has-poppins-font-family" style="font-size:16px;font-style:normal;font-weight:600"><?php echo esc_html__( 'Kristan Watson', 'trucking-services' ); ?></p>
+<p class="author-name has-poppins-font-family" style="font-size:16px;font-style:normal;font-weight:600"><?php echo esc_html__( 'Jorge Salazar', 'trucking-services' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"author-post","style":{"elements":{"link":{"color":{"text":"var:preset|color|secondary"}}},"typography":{"fontSize":"16px","fontStyle":"normal","fontWeight":"400"},"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"},"margin":{"top":"0","bottom":"0","left":"0","right":"0"}}},"textColor":"secondary","fontFamily":"poppins"} -->
-<p class="author-post has-secondary-color has-text-color has-link-color has-poppins-font-family" style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;font-size:16px;font-style:normal;font-weight:400"><?php echo esc_html__( 'Business Manager', 'trucking-services' ); ?></p>
+<p class="author-post has-secondary-color has-text-color has-link-color has-poppins-font-family" style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;font-size:16px;font-style:normal;font-weight:400"><?php echo esc_html__( 'Gerente Comercial', 'trucking-services' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 

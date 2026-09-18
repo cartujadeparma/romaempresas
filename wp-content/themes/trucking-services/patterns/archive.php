@@ -20,7 +20,7 @@
 
 <!-- wp:post-title {"level":3,"isLink":true,"style":{"typography":{"fontSize":"20px","fontStyle":"normal","fontWeight":"600"},"spacing":{"margin":{"top":"20px"}}}} /-->
 
-<!-- wp:post-excerpt {"moreText":"Read More","excerptLength":10} /--></div>
+<!-- wp:post-excerpt {"moreText":"Leer más","excerptLength":10} /--></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 <!-- /wp:post-template -->
@@ -39,7 +39,7 @@
 
 <!-- wp:query-no-results -->
 <!-- wp:paragraph {"align":"center","placeholder":"Add text or blocks that will display when a query returns no results.","style":{"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
-<p class="has-text-align-center" style="margin-top:0;margin-bottom:0"><?php echo esc_html__( 'No posts found', 'trucking-services' ); ?></p>
+<p class="has-text-align-center" style="margin-top:0;margin-bottom:0"><?php echo esc_html__( 'No se encontraron publicaciones', 'trucking-services' ); ?></p>
 <!-- /wp:paragraph -->
 <!-- /wp:query-no-results --></div>
 <!-- /wp:query --></div>

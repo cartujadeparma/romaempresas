@@ -12,11 +12,11 @@
 <!-- wp:group {"metadata":{"name":"Service Section"},"className":"service-section","style":{"spacing":{"padding":{"right":"0px","left":"0px","top":"0px","bottom":"0px"},"margin":{"top":"var:preset|spacing|20","bottom":"0px"}}},"backgroundColor":"quaternary","layout":{"type":"constrained","contentSize":"75%"}} -->
 <div class="wp-block-group service-section has-quaternary-background-color has-background" style="margin-top:var(--wp--preset--spacing--20);margin-bottom:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px"><!-- wp:group {"className":"service-head-box wow zoomIn","style":{"spacing":{"margin":{"bottom":"40px"}}},"layout":{"type":"constrained","contentSize":""}} -->
 <div class="wp-block-group service-head-box wow zoomIn" style="margin-bottom:40px"><!-- wp:heading {"textAlign":"center","style":{"elements":{"link":{"color":{"text":"var:preset|color|primary"}}},"typography":{"fontSize":"18px","fontStyle":"normal","fontWeight":"600","textTransform":"uppercase"}},"textColor":"primary","fontFamily":"poppins"} -->
-<h2 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-link-color has-poppins-font-family" style="font-size:18px;font-style:normal;font-weight:600;text-transform:uppercase"><?php echo esc_html__( 'Our Services', 'trucking-services' ); ?></h2>
+<h2 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-link-color has-poppins-font-family" style="font-size:18px;font-style:normal;font-weight:600;text-transform:uppercase"><?php echo esc_html__( 'Nuestros Servicios', 'trucking-services' ); ?></h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center","style":{"elements":{"link":{"color":{"text":"var:preset|color|secondary"}}},"typography":{"fontSize":"22px","fontStyle":"normal","fontWeight":"700"},"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"},"margin":{"right":"0","left":"0","top":"10px","bottom":"10px"}}},"textColor":"secondary","fontFamily":"poppins"} -->
-<p class="has-text-align-center has-secondary-color has-text-color has-link-color has-poppins-font-family" style="margin-top:10px;margin-right:0;margin-bottom:10px;margin-left:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;font-size:22px;font-style:normal;font-weight:700"><?php echo esc_html__( 'Services We’re Offering', 'trucking-services' ); ?></p>
+<p class="has-text-align-center has-secondary-color has-text-color has-link-color has-poppins-font-family" style="margin-top:10px;margin-right:0;margin-bottom:10px;margin-left:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;font-size:22px;font-style:normal;font-weight:700"><?php echo esc_html__( 'Lo que ofrecemos', 'trucking-services' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -38,16 +38,16 @@
 <!-- /wp:group -->
 
 <!-- wp:heading {"textAlign":"left","level":5,"className":"service-card-title","style":{"typography":{"fontSize":"24px","fontStyle":"normal","fontWeight":"700","textTransform":"capitalize"},"elements":{"link":{"color":{"text":"var:preset|color|secondary"}}},"spacing":{"margin":{"top":"var:preset|spacing|30"}}},"textColor":"secondary","fontFamily":"poppins"} -->
-<h5 class="wp-block-heading has-text-align-left service-card-title has-secondary-color has-text-color has-link-color has-poppins-font-family" style="margin-top:var(--wp--preset--spacing--30);font-size:24px;font-style:normal;font-weight:700;text-transform:capitalize"><?php echo esc_html__( 'Full Truckload Shipping', 'trucking-services' ); ?></h5>
+<h5 class="wp-block-heading has-text-align-left service-card-title has-secondary-color has-text-color has-link-color has-poppins-font-family" style="margin-top:var(--wp--preset--spacing--30);font-size:24px;font-style:normal;font-weight:700;text-transform:capitalize"><?php echo esc_html__( 'Transporte de Carga Pesada', 'trucking-services' ); ?></h5>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"className":"service-card-desc","style":{"elements":{"link":{"color":{"text":"var:preset|color|secondary"}}},"typography":{"fontSize":"17px","fontStyle":"normal","fontWeight":"400"}},"textColor":"secondary","fontFamily":"poppins"} -->
-<p class="service-card-desc has-secondary-color has-text-color has-link-color has-poppins-font-family" style="font-size:17px;font-style:normal;font-weight:400"><?php echo esc_html__( 'End-to-end transport for large shipments with guaranteed delivery windows.', 'trucking-services' ); ?></p>
+<p class="service-card-desc has-secondary-color has-text-color has-link-color has-poppins-font-family" style="font-size:17px;font-style:normal;font-weight:400"><?php echo esc_html__( 'Traslado seguro de maquinaria y cargas de gran volumen, con equipos especializados y cobertura nacional.', 'trucking-services' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"className":"service-card-btn","layout":{"type":"flex","justifyContent":"left"}} -->
 <div class="wp-block-buttons service-card-btn"><!-- wp:button {"backgroundColor":"secondary","textColor":"base","style":{"typography":{"fontSize":"15px","lineHeight":"1"},"spacing":{"padding":{"left":"10px","right":"10px","top":"10px","bottom":"10px"}},"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"border":{"radius":"100px"}}} -->
-<div class="wp-block-button"><a class="wp-block-button__link has-base-color has-secondary-background-color has-text-color has-background has-link-color has-custom-font-size wp-element-button" href="#" style="border-radius:100px;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;font-size:15px;line-height:1"><img class="wp-image-25" style="" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/service-arrow.png" alt=""></a></div>
+<div class="wp-block-button"><a class="wp-block-button__link has-base-color has-secondary-background-color has-text-color has-background has-link-color has-custom-font-size wp-element-button" href="<?php echo esc_url( home_url( '/servicios/transporte-de-carga-pesada/' ) ); ?>" style="border-radius:100px;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;font-size:15px;line-height:1"><img class="wp-image-25" style="" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/service-arrow.png" alt=""></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div>
@@ -70,16 +70,16 @@
 <!-- /wp:group -->
 
 <!-- wp:heading {"textAlign":"left","level":5,"className":"service-card-title","style":{"typography":{"fontSize":"24px","fontStyle":"normal","fontWeight":"700","textTransform":"capitalize"},"elements":{"link":{"color":{"text":"var:preset|color|secondary"}}},"spacing":{"margin":{"top":"var:preset|spacing|30"}}},"textColor":"secondary","fontFamily":"poppins"} -->
-<h5 class="wp-block-heading has-text-align-left service-card-title has-secondary-color has-text-color has-link-color has-poppins-font-family" style="margin-top:var(--wp--preset--spacing--30);font-size:24px;font-style:normal;font-weight:700;text-transform:capitalize"><?php echo esc_html__( 'Less Truckload Freight', 'trucking-services' ); ?></h5>
+<h5 class="wp-block-heading has-text-align-left service-card-title has-secondary-color has-text-color has-link-color has-poppins-font-family" style="margin-top:var(--wp--preset--spacing--30);font-size:24px;font-style:normal;font-weight:700;text-transform:capitalize"><?php echo esc_html__( 'Transporte de Carga General', 'trucking-services' ); ?></h5>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"className":"service-card-desc","style":{"elements":{"link":{"color":{"text":"var:preset|color|secondary"}}},"typography":{"fontSize":"17px","fontStyle":"normal","fontWeight":"400"}},"textColor":"secondary","fontFamily":"poppins"} -->
-<p class="service-card-desc has-secondary-color has-text-color has-link-color has-poppins-font-family" style="font-size:17px;font-style:normal;font-weight:400"><?php echo esc_html__( 'Cost-effective shared transport for smaller loads. Cost-effective shared', 'trucking-services' ); ?></p>
+<p class="service-card-desc has-secondary-color has-text-color has-link-color has-poppins-font-family" style="font-size:17px;font-style:normal;font-weight:400"><?php echo esc_html__( 'Soluciones flexibles para carga general y paletizada, con seguimiento en tiempo real.', 'trucking-services' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"className":"service-card-btn","layout":{"type":"flex","justifyContent":"left"}} -->
 <div class="wp-block-buttons service-card-btn"><!-- wp:button {"backgroundColor":"secondary","textColor":"base","style":{"typography":{"fontSize":"15px","lineHeight":"1"},"spacing":{"padding":{"left":"10px","right":"10px","top":"10px","bottom":"10px"}},"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"border":{"radius":"100px"}}} -->
-<div class="wp-block-button"><a class="wp-block-button__link has-base-color has-secondary-background-color has-text-color has-background has-link-color has-custom-font-size wp-element-button" href="#" style="border-radius:100px;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;font-size:15px;line-height:1"><img class="wp-image-25" style="" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/service-arrow.png" alt=""></a></div>
+<div class="wp-block-button"><a class="wp-block-button__link has-base-color has-secondary-background-color has-text-color has-background has-link-color has-custom-font-size wp-element-button" href="<?php echo esc_url( home_url( '/servicios/transporte-de-carga-general/' ) ); ?>" style="border-radius:100px;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;font-size:15px;line-height:1"><img class="wp-image-25" style="" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/service-arrow.png" alt=""></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div>
@@ -102,16 +102,16 @@
 <!-- /wp:group -->
 
 <!-- wp:heading {"textAlign":"left","level":5,"className":"service-card-title","style":{"typography":{"fontSize":"24px","fontStyle":"normal","fontWeight":"700","textTransform":"capitalize"},"elements":{"link":{"color":{"text":"var:preset|color|secondary"}}},"spacing":{"margin":{"top":"var:preset|spacing|30"}}},"textColor":"secondary","fontFamily":"poppins"} -->
-<h5 class="wp-block-heading has-text-align-left service-card-title has-secondary-color has-text-color has-link-color has-poppins-font-family" style="margin-top:var(--wp--preset--spacing--30);font-size:24px;font-style:normal;font-weight:700;text-transform:capitalize"><?php echo esc_html__( 'Refrigerated Transport', 'trucking-services' ); ?></h5>
+<h5 class="wp-block-heading has-text-align-left service-card-title has-secondary-color has-text-color has-link-color has-poppins-font-family" style="margin-top:var(--wp--preset--spacing--30);font-size:24px;font-style:normal;font-weight:700;text-transform:capitalize"><?php echo esc_html__( 'Transporte Corporativo', 'trucking-services' ); ?></h5>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"className":"service-card-desc","style":{"elements":{"link":{"color":{"text":"var:preset|color|secondary"}}},"typography":{"fontSize":"17px","fontStyle":"normal","fontWeight":"400"}},"textColor":"secondary","fontFamily":"poppins"} -->
-<p class="service-card-desc has-secondary-color has-text-color has-link-color has-poppins-font-family" style="font-size:17px;font-style:normal;font-weight:400"><?php echo esc_html__( 'Temperature-controlled trucks for perishable goods.', 'trucking-services' ); ?></p>
+<p class="service-card-desc has-secondary-color has-text-color has-link-color has-poppins-font-family" style="font-size:17px;font-style:normal;font-weight:400"><?php echo esc_html__( 'Traslado de personal y unidades para empresas, con rutas y horarios adaptados a cada cliente.', 'trucking-services' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"className":"service-card-btn","layout":{"type":"flex","justifyContent":"left"}} -->
 <div class="wp-block-buttons service-card-btn"><!-- wp:button {"backgroundColor":"secondary","textColor":"base","style":{"typography":{"fontSize":"15px","lineHeight":"1"},"spacing":{"padding":{"left":"10px","right":"10px","top":"10px","bottom":"10px"}},"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"border":{"radius":"100px"}}} -->
-<div class="wp-block-button"><a class="wp-block-button__link has-base-color has-secondary-background-color has-text-color has-background has-link-color has-custom-font-size wp-element-button" href="#" style="border-radius:100px;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;font-size:15px;line-height:1"><img class="wp-image-25" style="" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/service-arrow.png" alt=""></a></div>
+<div class="wp-block-button"><a class="wp-block-button__link has-base-color has-secondary-background-color has-text-color has-background has-link-color has-custom-font-size wp-element-button" href="<?php echo esc_url( home_url( '/servicios/transporte-corporativo/' ) ); ?>" style="border-radius:100px;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;font-size:15px;line-height:1"><img class="wp-image-25" style="" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/service-arrow.png" alt=""></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div>
