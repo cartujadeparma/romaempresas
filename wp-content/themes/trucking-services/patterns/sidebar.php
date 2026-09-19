@@ -54,7 +54,7 @@
 <!-- wp:social-links {"layout":{"type":"flex","justifyContent":"left"}} -->
 <ul class="wp-block-social-links"><!-- wp:social-link {"url":"https://www.facebook.com/profile.php?id=100064050996376","service":"facebook"} /-->
 
-<!-- wp:social-link {"url":"https://wa.me/51936820612","service":"whatsapp"} /--></ul>
+<!-- wp:social-link {"url":"https://wa.me/51936820612?text=Hola%2C%20quisiera%20solicitar%20informaci%C3%B3n%20sobre%20sus%20servicios%20de%20transporte%20de%20carga.","service":"whatsapp"} /--></ul>
 <!-- /wp:social-links --></div>
 
 <!-- /wp:group --></div>

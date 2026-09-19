@@ -18,9 +18,9 @@ usando el tema **Trucking Services**.
   testimonios en *lorem ipsum*); ya están traducidos al español y adaptados
   a **Inversiones & Transporte Roma** (textos, botones, menú, footer, 404,
   barra lateral), con los enlaces apuntando a las páginas reales del sitio.
-  El teléfono, correo, dirección y redes sociales del footer ya usan los
-  datos reales de la empresa (ver paso 4 de la sección 4 para el detalle y
-  una nota sobre el correo con tilde).
+  El teléfono/WhatsApp (con mensaje predefinido), correo, dirección y
+  redes sociales del footer ya usan los datos reales de la empresa (ver
+  paso 3 de la sección 4 para el detalle).
 - **Plugins recomendados por el propio tema** (vía TGM, ya vendorizados en
   `wp-content/plugins`): **Contact Form 7** (formularios) y **Classic Blog
   Grid** (listado de Blog/Noticias).
@@ -107,14 +107,16 @@ sitio), no en el contenido, así que deben hacerse una vez desde el panel:
    bloques) → edita la parte de plantilla **Header** → selecciona el bloque
    **Navigation** → en sus opciones, *Importar menú clásico* / *Seleccionar
    menú* → elige **"Menú principal"**. Guarda la parte de plantilla.
-3. **Enlace de WhatsApp**: el ítem *WhatsApp* del menú ya apunta a
-   `https://wa.me/51936820612` (número real de la empresa). Si se desea, se
-   le puede añadir un mensaje predefinido vía `?text=` editando el ítem en
-   `Apariencia > Menús` o desde el propio bloque Navigation.
-4. **Datos de contacto del tema**: `patterns/footer.php`, `patterns/sidebar.php`
+3. **Datos de contacto del tema**: `patterns/footer.php`, `patterns/sidebar.php`
    y el enlace de WhatsApp del menú (WXR) ya usan los datos reales de la
    empresa:
-   - Teléfono / WhatsApp: `+51 936 820 612` (`https://wa.me/51936820612`).
+   - Teléfono / WhatsApp: `+51 936 820 612`. El enlace
+     (`https://wa.me/51936820612?text=...`) ya incluye un mensaje
+     predefinido ("Hola, quisiera solicitar información sobre sus
+     servicios de transporte de carga.") tanto en el ítem *WhatsApp* del
+     menú principal como en los íconos de WhatsApp del footer y de la
+     barra lateral del blog. Para cambiar el mensaje, edita el parámetro
+     `?text=` (codificado como URL) en esos tres lugares.
    - Correo: `atencionalcliente@romaempresas.com` (sin tilde, para máxima
      compatibilidad con clientes de email y servidores SMTP).
    - Dirección: `Jr. El Tesoro 497 Urb. Túpac Amaru, San Luis, Lima 15021,
@@ -130,17 +132,17 @@ sitio), no en el contenido, así que deben hacerse una vez desde el panel:
    `wp-content/themes/trucking-services/patterns/footer.php` y
    `patterns/sidebar.php`, o desde el editor de sitio una vez que WordPress
    haya generado una copia personalizada de esas partes de plantilla.
-5. **Formularios**: crea los formularios en `Contact > Formularios de
+4. **Formularios**: crea los formularios en `Contact > Formularios de
    contacto` (Contact Form 7) para "Solicitar cotización" (tipo de carga,
    origen/destino, volumen, fecha) y "Formulario de contacto" (nombre,
    empresa, mensaje), y pega el shortcode `[contact-form-7 ...]` resultante
    en el contenido de cada página importada.
-6. **Publicar las páginas**: se importan como *borrador* a propósito, para
+5. **Publicar las páginas**: se importan como *borrador* a propósito, para
    que el contenido de marcador de posición no quede visible públicamente
    hasta que el equipo de contenido redacte el texto final de cada página
    (ver columna "Contenido clave" en `estructura-sitio-web.md`) y las
    publique.
-7. **Permalinks**: `Ajustes > Enlaces permanentes` → estructura
+6. **Permalinks**: `Ajustes > Enlaces permanentes` → estructura
    `/%postname%/` (recomendado en la sección 8 del documento de
    estructura).
 
