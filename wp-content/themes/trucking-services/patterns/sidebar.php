@@ -52,19 +52,9 @@
 <!-- /wp:heading -->
 
 <!-- wp:social-links {"layout":{"type":"flex","justifyContent":"left"}} -->
-<ul class="wp-block-social-links"><!-- wp:social-link {"url":"#","service":"facebook"} /-->
+<ul class="wp-block-social-links"><!-- wp:social-link {"url":"https://www.facebook.com/profile.php?id=100064050996376","service":"facebook"} /-->
 
-<!-- wp:social-link {"url":"#","service":"twitter"} /-->
-
-<!-- wp:social-link {"url":"#","service":"instagram"} /-->
-
-<!-- wp:social-link {"url":"#","service":"linkedin"} /-->
-
-<!-- wp:social-link {"url":"#","service":"pinterest"} /-->
-
-<!-- wp:social-link {"url":"#","service":"vimeo"} /-->
-
-<!-- wp:social-link {"url":"#","service":"tumblr"} /--></ul>
+<!-- wp:social-link {"url":"https://wa.me/51936820612","service":"whatsapp"} /--></ul>
 <!-- /wp:social-links --></div>
 
 <!-- /wp:group --></div>
