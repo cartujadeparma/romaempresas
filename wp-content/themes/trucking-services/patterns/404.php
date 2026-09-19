@@ -10,18 +10,18 @@
 <div class="wp-block-group alignwide has-background has-body-font-family" style="border-radius:8px;background-color:#1f1f1f;margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40);font-size:32px;font-style:normal;font-weight:700"><!-- wp:columns -->
 <div class="wp-block-columns"><!-- wp:column {"verticalAlignment":"center"} -->
 <div class="wp-block-column is-vertically-aligned-center"><!-- wp:heading {"textAlign":"center","style":{"elements":{"link":{"color":{"text":"var:preset|color|link-color"}}}},"textColor":"link-color"} -->
-<h2 class="wp-block-heading has-text-align-center has-link-color-color has-text-color has-link-color"><?php echo esc_html__( '404: Page Not Disco-vered', 'trucking-services' ); ?></h2>
+<h2 class="wp-block-heading has-text-align-center has-link-color-color has-text-color has-link-color"><?php echo esc_html__( '404: Página no encontrada', 'trucking-services' ); ?></h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"16px","fontStyle":"normal","fontWeight":"400"},"elements":{"link":{"color":{"text":"var:preset|color|link-color"}}}},"textColor":"link-color"} -->
-<p class="has-text-align-center has-link-color-color has-text-color has-link-color" style="font-size:16px;font-style:normal;font-weight:400"><?php echo esc_html__( "Looks like the dance floor is empty here! This page has done a disappearing act. Head back to the main stage by clicking the navigation links, and let's keep the party going!", 'trucking-services' ); ?></p>
+<p class="has-text-align-center has-link-color-color has-text-color has-link-color" style="font-size:16px;font-style:normal;font-weight:400"><?php echo esc_html__( 'La página que buscas no existe o fue movida. Usa el buscador o vuelve al inicio para seguir navegando por nuestro sitio.', 'trucking-services' ); ?></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:search {"label":"Search","showLabel":false,"placeholder":"Find another ","width":75,"widthUnit":"%","buttonText":"Search","buttonPosition":"button-inside","align":"center","style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"border":{"width":"0px","style":"none","radius":"6px"}},"backgroundColor":"primary","textColor":"base"} /-->
+<!-- wp:search {"label":"Buscar","showLabel":false,"placeholder":"Buscar en el sitio","width":75,"widthUnit":"%","buttonText":"Buscar","buttonPosition":"button-inside","align":"center","style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"border":{"width":"0px","style":"none","radius":"6px"}},"backgroundColor":"primary","textColor":"base"} /-->
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"secondary","textColor":"base","style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}}} -->
-<div class="wp-block-button"><a class="wp-block-button__link has-base-color has-secondary-background-color has-text-color has-background has-link-color wp-element-button"><?php echo esc_html__( 'Go to home page', 'trucking-services' ); ?></a></div>
+<div class="wp-block-button"><a class="wp-block-button__link has-base-color has-secondary-background-color has-text-color has-background has-link-color wp-element-button" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_html__( 'Volver al inicio', 'trucking-services' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:column --></div>

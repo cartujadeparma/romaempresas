@@ -17,7 +17,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center","className":"blog-sec-desc","style":{"typography":{"fontSize":"22px","textTransform":"capitalize","fontStyle":"normal","fontWeight":"700"},"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"spacing":{"margin":{"top":"12px"}}},"textColor":"base","fontFamily":"poppins"} -->
-<p class="has-text-align-center blog-sec-desc has-base-color has-text-color has-link-color has-poppins-font-family" style="margin-top:12px;font-size:22px;font-style:normal;font-weight:700;text-transform:capitalize"><?php echo esc_html__( 'Latest News & Insights', 'trucking-services' ); ?></p>
+<p class="has-text-align-center blog-sec-desc has-base-color has-text-color has-link-color has-poppins-font-family" style="margin-top:12px;font-size:22px;font-style:normal;font-weight:700;text-transform:capitalize"><?php echo esc_html__( 'Últimas noticias y novedades', 'trucking-services' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 

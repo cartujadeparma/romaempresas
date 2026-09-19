@@ -11,7 +11,16 @@ usando el tema **Trucking Services**.
   theclassictemplates.com, orientado a transporte/logística. Es el tema con
   el que se implementa la estructura definida (ver sección 2). El repositorio
   también incluye `wp-content/themes/transcargo-transportation` como
-  alternativa, no usada por esta implementación.
+  alternativa, no usada por esta implementación. Sus patrones de bloques
+  (`patterns/*.php`, usados por `front-page.html`, `page.html`, `404.html`,
+  etc.) vienen originalmente en inglés con textos y datos de contacto de
+  demostración ("RoadFleet Logistics", direcciones/teléfonos de EE. UU.,
+  testimonios en *lorem ipsum*); ya están traducidos al español y adaptados
+  a **Inversiones & Transporte Roma** (textos, botones, menú, footer, 404,
+  barra lateral), con los enlaces apuntando a las páginas reales del sitio.
+  El teléfono, correo, dirección y redes sociales del footer quedan como
+  marcadores de posición reconocibles (ver paso 4 de la sección 4) hasta que
+  se reemplacen por los datos reales de la empresa.
 - **Plugins recomendados por el propio tema** (vía TGM, ya vendorizados en
   `wp-content/plugins`): **Contact Form 7** (formularios) y **Classic Blog
   Grid** (listado de Blog/Noticias).
@@ -51,11 +60,13 @@ no de plantillas PHP clásicas, así que aplica la estructura así:
   + título) al contenido de la página, dando una apariencia consistente sin
   necesidad de asignar plantillas una por una.
 - El menú de navegación del tema (bloque *Navigation* dentro de la parte de
-  plantilla *Header*) trae por defecto enlaces de demostración (Home, About,
-  Services, Blog, Contact...). **No** apunta automáticamente al "Menú
-  principal" importado por el WXR — hay que enlazarlos manualmente (paso 2
-  de la sección 3), porque esa asociación vive en la base de datos, no en
-  archivos del repositorio.
+  plantilla *Header*) ya trae los enlaces en español apuntando a las
+  páginas reales de primer nivel (Inicio, Nosotros, Servicios, Blog,
+  Contacto...), pero es un menú plano: no incluye los desplegables con las
+  subpáginas y **no** está enlazado al "Menú principal" importado por el
+  WXR, porque esa asociación vive en la base de datos, no en archivos del
+  repositorio — hay que enlazarlo manualmente (paso 2 de la sección 4) para
+  tener el árbol completo con desplegables.
 
 ## 3. Pasos para importar la estructura
 
@@ -87,27 +98,41 @@ sitio), no en el contenido, así que deben hacerse una vez desde el panel:
    *Una página estática* → Página de inicio: **Inicio**; Página de entradas:
    **Blog / Noticias**. Esto activa `templates/front-page.html` del tema
    automáticamente (ver sección 2).
-2. **Ubicación del menú**: `Apariencia > Editor` (editor de sitio, porque
-   Trucking Services es un tema de bloques) → edita la parte de plantilla
-   **Header** → selecciona el bloque **Navigation** → en sus opciones,
-   *Importar menú clásico* / *Seleccionar menú* → elige **"Menú principal"**.
-   Esto reemplaza los enlaces de demostración (Home, About, Services...) por
-   el árbol real de 9 secciones. Guarda la parte de plantilla.
+2. **Ubicación del menú**: los patrones del tema (`patterns/header.php` y
+   `patterns/footer.php`) ya traen los enlaces en español y apuntando a las
+   páginas reales de primer nivel (Inicio, Nosotros, Servicios, Blog,
+   Contacto...), pero son un menú plano, sin los desplegables con las
+   subpáginas. Para tener el árbol completo con desplegables: `Apariencia >
+   Editor` (editor de sitio, porque Trucking Services es un tema de
+   bloques) → edita la parte de plantilla **Header** → selecciona el bloque
+   **Navigation** → en sus opciones, *Importar menú clásico* / *Seleccionar
+   menú* → elige **"Menú principal"**. Guarda la parte de plantilla.
 3. **Enlace real de WhatsApp**: edita el ítem *WhatsApp* del menú (en
    `Apariencia > Menús` o desde el propio bloque Navigation) y reemplaza
    `https://wa.me/51XXXXXXXXX` por el número real de la empresa (y, si se
    desea, un mensaje predefinido vía `?text=`).
-4. **Formularios**: crea los formularios en `Contact > Formularios de
+4. **Datos de contacto del tema**: `patterns/footer.php` (y el botón
+   "Solicitar cotización" del header) ya están en español y con textos
+   propios de Inversiones & Transporte Roma, pero el teléfono
+   (`+51 999 999 999`), el correo (`contacto@romaempresas.pe`), la
+   dirección (`Av. Argentina 1234, Callao, Lima, Perú`) y las redes
+   sociales (Facebook, Instagram, LinkedIn, WhatsApp, TikTok — todas con
+   URL genérica) son marcadores de posición. Reemplázalos por los datos
+   reales de la empresa antes de publicar (se pueden editar directamente en
+   `wp-content/themes/trucking-services/patterns/footer.php`, o desde el
+   editor de sitio una vez que WordPress haya generado una copia
+   personalizada de esa parte de plantilla).
+5. **Formularios**: crea los formularios en `Contact > Formularios de
    contacto` (Contact Form 7) para "Solicitar cotización" (tipo de carga,
    origen/destino, volumen, fecha) y "Formulario de contacto" (nombre,
    empresa, mensaje), y pega el shortcode `[contact-form-7 ...]` resultante
    en el contenido de cada página importada.
-5. **Publicar las páginas**: se importan como *borrador* a propósito, para
+6. **Publicar las páginas**: se importan como *borrador* a propósito, para
    que el contenido de marcador de posición no quede visible públicamente
    hasta que el equipo de contenido redacte el texto final de cada página
    (ver columna "Contenido clave" en `estructura-sitio-web.md`) y las
    publique.
-6. **Permalinks**: `Ajustes > Enlaces permanentes` → estructura
+7. **Permalinks**: `Ajustes > Enlaces permanentes` → estructura
    `/%postname%/` (recomendado en la sección 8 del documento de
    estructura).
 

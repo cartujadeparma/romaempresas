@@ -23,93 +23,93 @@ if ( $trucking_services_results )  {
 <div class="wp-block-column footer-box1 wow bounceInUp" style="padding-right:var(--wp--preset--spacing--50)"><!-- wp:site-title {"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"typography":{"fontSize":"30px"}},"textColor":"base"} /-->
 
 <!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"typography":{"fontSize":"14px"}},"textColor":"base"} -->
-<p class="has-base-color has-text-color has-link-color" style="font-size:14px"><em><?php echo esc_html__( 'RoadFleet Logistics provides safe, efficient, and affordable trucking and freight solutions. We’re committed to keeping your goods moving — safely and on time.', 'trucking-services' ); ?></em></p>
+<p class="has-base-color has-text-color has-link-color" style="font-size:14px"><em><?php echo esc_html__( 'Inversiones & Transporte Roma brinda soluciones de transporte de carga seguras, eficientes y a la medida de cada cliente. Nuestro compromiso es que tu carga llegue siempre a tiempo y en buenas condiciones.', 'trucking-services' ); ?></em></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"footer-phone","style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"typography":{"fontSize":"14px"}},"textColor":"base"} -->
-<p class="footer-phone has-base-color has-text-color has-link-color" style="font-size:14px"><a href="tel:1234567890"><i class="fa-solid fa-phone"></i><?php echo esc_html__( '+1234567890', 'trucking-services' ); ?></a></p>
+<p class="footer-phone has-base-color has-text-color has-link-color" style="font-size:14px"><a href="tel:+51999999999"><i class="fa-solid fa-phone"></i><?php echo esc_html__( '+51 999 999 999', 'trucking-services' ); ?></a></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"footer-mail","style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"typography":{"fontSize":"14px"}},"textColor":"base"} -->
-<p class="footer-mail has-base-color has-text-color has-link-color" style="font-size:14px"><a href="mailto:trucking@example.com"><i class="fa-regular fa-envelope"></i><?php echo esc_html__( 'trucking@example.com', 'trucking-services' ); ?></a></p>
+<p class="footer-mail has-base-color has-text-color has-link-color" style="font-size:14px"><a href="mailto:contacto@romaempresas.pe"><i class="fa-regular fa-envelope"></i><?php echo esc_html__( 'contacto@romaempresas.pe', 'trucking-services' ); ?></a></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"footer-location","style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"typography":{"fontSize":"14px"}},"textColor":"base"} -->
-<p class="footer-location has-base-color has-text-color has-link-color" style="font-size:14px"><a href="#"><i class="fa-solid fa-location-dot"></i><?php echo esc_html__( '300 Lane, Los Angeles, CA 90028, USA', 'trucking-services' ); ?></a></p>
+<p class="footer-location has-base-color has-text-color has-link-color" style="font-size:14px"><a href="#"><i class="fa-solid fa-location-dot"></i><?php echo esc_html__( 'Av. Argentina 1234, Callao, Lima, Perú', 'trucking-services' ); ?></a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
 <!-- wp:column {"className":"footer-box2 wow bounceInUp"} -->
 <div class="wp-block-column footer-box2 wow bounceInUp"><!-- wp:heading {"level":4,"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"typography":{"fontSize":"26px","textTransform":"capitalize","fontStyle":"normal","fontWeight":"500"}},"textColor":"base","fontFamily":"heading"} -->
-<h4 class="wp-block-heading has-base-color has-text-color has-link-color has-heading-font-family" style="font-size:26px;font-style:normal;font-weight:500;text-transform:capitalize"><em><?php echo esc_html__( 'Explore', 'trucking-services' ); ?></em></h4>
+<h4 class="wp-block-heading has-base-color has-text-color has-link-color has-heading-font-family" style="font-size:26px;font-style:normal;font-weight:500;text-transform:capitalize"><em><?php echo esc_html__( 'Explora', 'trucking-services' ); ?></em></h4>
 <!-- /wp:heading -->
 
-<!-- wp:navigation {"textColor":"base","overlayMenu":"never","icon":"menu","overlayBackgroundColor":"secondary","metadata":{"ignoredHookedBlocks":["woocommerce/customer-account"]},"style":{"spacing":{"blockGap":"12px"},"typography":{"fontStyle":"normal","fontWeight":"400","textTransform":"capitalize","fontSize":"14px"}},"layout":{"type":"flex","justifyContent":"left","orientation":"vertical"}} --><!-- wp:navigation-link {"label":"Home","url":"#","kind":"custom","isTopLevelLink":true} /-->
+<!-- wp:navigation {"textColor":"base","overlayMenu":"never","icon":"menu","overlayBackgroundColor":"secondary","metadata":{"ignoredHookedBlocks":["woocommerce/customer-account"]},"style":{"spacing":{"blockGap":"12px"},"typography":{"fontStyle":"normal","fontWeight":"400","textTransform":"capitalize","fontSize":"14px"}},"layout":{"type":"flex","justifyContent":"left","orientation":"vertical"}} --><!-- wp:navigation-link {"label":"Inicio","url":"<?php echo esc_url( home_url( '/' ) ); ?>","kind":"custom","isTopLevelLink":true} /-->
 
-<!-- wp:navigation-link {"label":"About","url":"#","kind":"custom","isTopLevelLink":true} /-->
+<!-- wp:navigation-link {"label":"Nosotros","url":"<?php echo esc_url( home_url( '/nosotros/' ) ); ?>","kind":"custom","isTopLevelLink":true} /-->
 
-<!-- wp:navigation-link {"label":"Services","url":"#","kind":"custom","isTopLevelLink":true} /-->
+<!-- wp:navigation-link {"label":"Servicios","url":"<?php echo esc_url( home_url( '/servicios/' ) ); ?>","kind":"custom","isTopLevelLink":true} /-->
 
-<!-- wp:navigation-link {"label":"Blog","url":"#","kind":"custom","isTopLevelLink":true} /-->
+<!-- wp:navigation-link {"label":"Blog","url":"<?php echo esc_url( home_url( '/blog/' ) ); ?>","kind":"custom","isTopLevelLink":true} /-->
 
-<!-- wp:navigation-link {"label":"Contact","url":"#","kind":"custom","isTopLevelLink":true} /-->
+<!-- wp:navigation-link {"label":"Contacto","url":"<?php echo esc_url( home_url( '/contacto/' ) ); ?>","kind":"custom","isTopLevelLink":true} /-->
 
 <!-- /wp:navigation --></div>
 <!-- /wp:column -->
 
 <!-- wp:column {"className":"footer-box3 wow bounceInUp"} -->
 <div class="wp-block-column footer-box3 wow bounceInUp"><!-- wp:heading {"level":4,"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"typography":{"fontSize":"26px","textTransform":"capitalize","fontStyle":"normal","fontWeight":"500"}},"textColor":"base","fontFamily":"heading"} -->
-<h4 class="wp-block-heading has-base-color has-text-color has-link-color has-heading-font-family" style="font-size:26px;font-style:normal;font-weight:500;text-transform:capitalize"><em><?php echo esc_html__( 'Our Services', 'trucking-services' ); ?></em></h4>
+<h4 class="wp-block-heading has-base-color has-text-color has-link-color has-heading-font-family" style="font-size:26px;font-style:normal;font-weight:500;text-transform:capitalize"><em><?php echo esc_html__( 'Nuestros Servicios', 'trucking-services' ); ?></em></h4>
 <!-- /wp:heading -->
 
 <!-- wp:list {"style":{"typography":{"fontSize":"14px"}}} -->
 <ul style="font-size:14px" class="wp-block-list"><!-- wp:list-item {"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"spacing":{"margin":{"bottom":"10px"}},"typography":{"textTransform":"capitalize"}},"textColor":"base"} -->
-<li class="has-base-color has-text-color has-link-color" style="margin-bottom:10px;text-transform:capitalize"><a href="#"><em><?php echo esc_html__( 'Full Truckload  Shipping', 'trucking-services' ); ?></em></a></li>
+<li class="has-base-color has-text-color has-link-color" style="margin-bottom:10px;text-transform:capitalize"><a href="<?php echo esc_url( home_url( '/servicios/transporte-de-carga-pesada/' ) ); ?>"><em><?php echo esc_html__( 'Transporte de Carga Pesada', 'trucking-services' ); ?></em></a></li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item {"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"spacing":{"margin":{"bottom":"10px"}},"typography":{"textTransform":"capitalize"}},"textColor":"base"} -->
-<li class="has-base-color has-text-color has-link-color" style="margin-bottom:10px;text-transform:capitalize"><a href="#"><em><?php echo esc_html__( 'Less Than Truckload  Freight', 'trucking-services' ); ?></em></a></li>
+<li class="has-base-color has-text-color has-link-color" style="margin-bottom:10px;text-transform:capitalize"><a href="<?php echo esc_url( home_url( '/servicios/transporte-de-carga-general/' ) ); ?>"><em><?php echo esc_html__( 'Transporte de Carga General', 'trucking-services' ); ?></em></a></li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item {"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"spacing":{"margin":{"bottom":"10px"}},"typography":{"textTransform":"capitalize"}},"textColor":"base"} -->
-<li class="has-base-color has-text-color has-link-color" style="margin-bottom:10px;text-transform:capitalize"><a href="#"><em><?php echo esc_html__( 'Refrigerated Transport', 'trucking-services' ); ?></em></a></li>
+<li class="has-base-color has-text-color has-link-color" style="margin-bottom:10px;text-transform:capitalize"><a href="<?php echo esc_url( home_url( '/servicios/transporte-corporativo/' ) ); ?>"><em><?php echo esc_html__( 'Transporte Corporativo', 'trucking-services' ); ?></em></a></li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item {"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"spacing":{"margin":{"bottom":"10px"}},"typography":{"textTransform":"capitalize"}},"textColor":"base"} -->
-<li class="has-base-color has-text-color has-link-color" style="margin-bottom:10px;text-transform:capitalize"><a href="#"><em><?php echo esc_html__( 'Express Cargo Delivery', 'trucking-services' ); ?></em></a></li>
+<li class="has-base-color has-text-color has-link-color" style="margin-bottom:10px;text-transform:capitalize"><a href="<?php echo esc_url( home_url( '/servicios/transporte-con-vehiculos-menores/' ) ); ?>"><em><?php echo esc_html__( 'Transporte con Vehículos Menores', 'trucking-services' ); ?></em></a></li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item {"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"spacing":{"margin":{"bottom":"10px"}},"typography":{"textTransform":"capitalize"}},"textColor":"base"} -->
-<li class="has-base-color has-text-color has-link-color" style="margin-bottom:10px;text-transform:capitalize"><a href="#"><em><?php echo esc_html__( 'Cross-Border Logistics', 'trucking-services' ); ?></em></a></li>
+<li class="has-base-color has-text-color has-link-color" style="margin-bottom:10px;text-transform:capitalize"><a href="<?php echo esc_url( home_url( '/servicios/servicios-especiales/' ) ); ?>"><em><?php echo esc_html__( 'Servicios Especiales', 'trucking-services' ); ?></em></a></li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item {"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"spacing":{"margin":{"bottom":"10px"}},"typography":{"textTransform":"capitalize"}},"textColor":"base"} -->
-<li class="has-base-color has-text-color has-link-color" style="margin-bottom:10px;text-transform:capitalize"><a href="#"><em><?php echo esc_html__( 'Warehouse & Distribution', 'trucking-services' ); ?></em></a></li>
+<li class="has-base-color has-text-color has-link-color" style="margin-bottom:10px;text-transform:capitalize"><a href="<?php echo esc_url( home_url( '/servicios/' ) ); ?>"><em><?php echo esc_html__( 'Ver todos los servicios', 'trucking-services' ); ?></em></a></li>
 <!-- /wp:list-item --></ul>
 <!-- /wp:list --></div>
 <!-- /wp:column -->
 
 <!-- wp:column {"className":"footer-box4 wow bounceInUp"} -->
 <div class="wp-block-column footer-box4 wow bounceInUp"><!-- wp:heading {"level":4,"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"typography":{"fontSize":"26px","textTransform":"capitalize","fontStyle":"normal","fontWeight":"500"}},"textColor":"base","fontFamily":"heading"} -->
-<h4 class="wp-block-heading has-base-color has-text-color has-link-color has-heading-font-family" style="font-size:26px;font-style:normal;font-weight:500;text-transform:capitalize"><em><?php echo esc_html__( 'social media', 'trucking-services' ); ?></em></h4>
+<h4 class="wp-block-heading has-base-color has-text-color has-link-color has-heading-font-family" style="font-size:26px;font-style:normal;font-weight:500;text-transform:capitalize"><em><?php echo esc_html__( 'Síguenos', 'trucking-services' ); ?></em></h4>
 <!-- /wp:heading -->
 
 <!-- wp:social-links {"iconColor":"base","iconColorValue":"#ffffff","openInNewTab":true,"showLabels":true,"className":"is-style-logos-only footer-social-box","layout":{"type":"flex","orientation":"vertical"}} -->
-<ul class="wp-block-social-links has-visible-labels has-icon-color is-style-logos-only footer-social-box"><!-- wp:social-link {"url":"www.youtube.com","service":"youtube"} /-->
+<ul class="wp-block-social-links has-visible-labels has-icon-color is-style-logos-only footer-social-box"><!-- wp:social-link {"url":"https://www.linkedin.com/","service":"linkedin"} /-->
 
-<!-- wp:social-link {"url":"www.instagram.com","service":"instagram"} /-->
+<!-- wp:social-link {"url":"https://www.instagram.com/","service":"instagram"} /-->
 
-<!-- wp:social-link {"url":"www.x.com","service":"x"} /-->
+<!-- wp:social-link {"url":"https://wa.me/51999999999","service":"whatsapp"} /-->
 
-<!-- wp:social-link {"url":"www.pinterest.com","service":"pinterest"} /-->
+<!-- wp:social-link {"url":"https://www.tiktok.com/","service":"tiktok"} /-->
 
-<!-- wp:social-link {"url":"www.facebook.com","service":"facebook"} /--></ul>
+<!-- wp:social-link {"url":"https://www.facebook.com/","service":"facebook"} /--></ul>
 <!-- /wp:social-links --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
 
 <!-- wp:paragraph {"align":"center","className":"footer-copyright","style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"spacing":{"padding":{"top":"30px","bottom":"30px"}},"border":{"top":{"color":"var:preset|color|base","width":"1px"}}},"textColor":"base"} -->
-<p class="has-text-align-center footer-copyright has-base-color has-text-color has-link-color" style="border-top-color:var(--wp--preset--color--base);border-top-width:1px;padding-top:30px;padding-bottom:30px"><?php echo esc_html__( 'Trucking Services Theme By Classic Templates', 'trucking-services' ); ?></p>
+<p class="has-text-align-center footer-copyright has-base-color has-text-color has-link-color" style="border-top-color:var(--wp--preset--color--base);border-top-width:1px;padding-top:30px;padding-bottom:30px"><?php echo esc_html( sprintf( __( '© %s Inversiones & Transporte Roma. Todos los derechos reservados.', 'trucking-services' ), gmdate( 'Y' ) ) ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
@@ -126,9 +126,9 @@ if ( $trucking_services_results )  {
 <div class="wp-block-group footer-form"><!-- wp:html -->
 <div class="signup-wrapper">
   <form class="signup-form">
-    <input type="text" placeholder="Name" class="input-field" />
-    <input type="email" placeholder="Email" class="input-field" />
-    <button type="submit" class="signup-btn"><?php echo esc_html__( 'Sign Up', 'trucking-services' ); ?></button>
+    <input type="text" placeholder="Nombre" class="input-field" />
+    <input type="email" placeholder="Correo electrónico" class="input-field" />
+    <button type="submit" class="signup-btn"><?php echo esc_html__( 'Suscribirme', 'trucking-services' ); ?></button>
   </form>
 </div>
 
@@ -142,95 +142,95 @@ if ( $trucking_services_results )  {
 <div class="wp-block-column footer-box1 wow bounceInUp" style="padding-right:var(--wp--preset--spacing--50)"><!-- wp:site-title {"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"typography":{"fontSize":"30px"}},"textColor":"base"} /-->
 
 <!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"typography":{"fontSize":"14px"}},"textColor":"base"} -->
-<p class="has-base-color has-text-color has-link-color" style="font-size:14px"><em><?php echo esc_html__( 'RoadFleet Logistics provides safe, efficient, and affordable trucking and freight solutions. We’re committed to keeping your goods moving — safely and on time.', 'trucking-services' ); ?></em></p>
+<p class="has-base-color has-text-color has-link-color" style="font-size:14px"><em><?php echo esc_html__( 'Inversiones & Transporte Roma brinda soluciones de transporte de carga seguras, eficientes y a la medida de cada cliente. Nuestro compromiso es que tu carga llegue siempre a tiempo y en buenas condiciones.', 'trucking-services' ); ?></em></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"footer-phone","style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"typography":{"fontSize":"14px"}},"textColor":"base"} -->
-<p class="footer-phone has-base-color has-text-color has-link-color" style="font-size:14px"><a href="tel:1234567890"><i class="fa-solid fa-phone"></i><?php echo esc_html__( '+1234567890', 'trucking-services' ); ?></a></p>
+<p class="footer-phone has-base-color has-text-color has-link-color" style="font-size:14px"><a href="tel:+51999999999"><i class="fa-solid fa-phone"></i><?php echo esc_html__( '+51 999 999 999', 'trucking-services' ); ?></a></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"footer-mail","style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"typography":{"fontSize":"14px"}},"textColor":"base"} -->
-<p class="footer-mail has-base-color has-text-color has-link-color" style="font-size:14px"><a href="mailto:trucking@example.com"><i class="fa-regular fa-envelope"></i><?php echo esc_html__( 'trucking@example.com', 'trucking-services' ); ?></a></p>
+<p class="footer-mail has-base-color has-text-color has-link-color" style="font-size:14px"><a href="mailto:contacto@romaempresas.pe"><i class="fa-regular fa-envelope"></i><?php echo esc_html__( 'contacto@romaempresas.pe', 'trucking-services' ); ?></a></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"footer-location","style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"typography":{"fontSize":"14px"}},"textColor":"base"} -->
-<p class="footer-location has-base-color has-text-color has-link-color" style="font-size:14px"><a href="#"><i class="fa-solid fa-location-dot"></i><?php echo esc_html__( '300 Lane, Los Angeles, CA 90028, USA', 'trucking-services' ); ?></a></p>
+<p class="footer-location has-base-color has-text-color has-link-color" style="font-size:14px"><a href="#"><i class="fa-solid fa-location-dot"></i><?php echo esc_html__( 'Av. Argentina 1234, Callao, Lima, Perú', 'trucking-services' ); ?></a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
 <!-- wp:column {"className":"footer-box2 wow bounceInUp"} -->
 <div class="wp-block-column footer-box2 wow bounceInUp"><!-- wp:heading {"level":4,"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"typography":{"fontSize":"26px","textTransform":"capitalize","fontStyle":"normal","fontWeight":"500"}},"textColor":"base","fontFamily":"heading"} -->
-<h4 class="wp-block-heading has-base-color has-text-color has-link-color has-heading-font-family" style="font-size:26px;font-style:normal;font-weight:500;text-transform:capitalize"><em><?php echo esc_html__( 'Explore', 'trucking-services' ); ?></em></h4>
+<h4 class="wp-block-heading has-base-color has-text-color has-link-color has-heading-font-family" style="font-size:26px;font-style:normal;font-weight:500;text-transform:capitalize"><em><?php echo esc_html__( 'Explora', 'trucking-services' ); ?></em></h4>
 <!-- /wp:heading -->
 
-<!-- wp:navigation {"textColor":"base","overlayMenu":"never","icon":"menu","overlayBackgroundColor":"secondary","metadata":{"ignoredHookedBlocks":["woocommerce/customer-account"]},"style":{"spacing":{"blockGap":"12px"},"typography":{"fontStyle":"normal","fontWeight":"400","textTransform":"capitalize","fontSize":"14px"}},"layout":{"type":"flex","justifyContent":"left","orientation":"vertical"}} --><!-- wp:navigation-link {"label":"Home","url":"#","kind":"custom","isTopLevelLink":true} /-->
+<!-- wp:navigation {"textColor":"base","overlayMenu":"never","icon":"menu","overlayBackgroundColor":"secondary","metadata":{"ignoredHookedBlocks":["woocommerce/customer-account"]},"style":{"spacing":{"blockGap":"12px"},"typography":{"fontStyle":"normal","fontWeight":"400","textTransform":"capitalize","fontSize":"14px"}},"layout":{"type":"flex","justifyContent":"left","orientation":"vertical"}} --><!-- wp:navigation-link {"label":"Inicio","url":"<?php echo esc_url( home_url( '/' ) ); ?>","kind":"custom","isTopLevelLink":true} /-->
 
-<!-- wp:navigation-link {"label":"About","url":"#","kind":"custom","isTopLevelLink":true} /-->
+<!-- wp:navigation-link {"label":"Nosotros","url":"<?php echo esc_url( home_url( '/nosotros/' ) ); ?>","kind":"custom","isTopLevelLink":true} /-->
 
-<!-- wp:navigation-link {"label":"Services","url":"#","kind":"custom","isTopLevelLink":true} /-->
+<!-- wp:navigation-link {"label":"Servicios","url":"<?php echo esc_url( home_url( '/servicios/' ) ); ?>","kind":"custom","isTopLevelLink":true} /-->
 
-<!-- wp:navigation-link {"label":"Fleet","url":"#","kind":"custom","isTopLevelLink":true} /-->
+<!-- wp:navigation-link {"label":"Flota","url":"<?php echo esc_url( home_url( '/flota/' ) ); ?>","kind":"custom","isTopLevelLink":true} /-->
 
-<!-- wp:navigation-link {"label":"Blog","url":"#","kind":"custom","isTopLevelLink":true} /-->
+<!-- wp:navigation-link {"label":"Blog","url":"<?php echo esc_url( home_url( '/blog/' ) ); ?>","kind":"custom","isTopLevelLink":true} /-->
 
-<!-- wp:navigation-link {"label":"Contact","url":"#","kind":"custom","isTopLevelLink":true} /-->
+<!-- wp:navigation-link {"label":"Contacto","url":"<?php echo esc_url( home_url( '/contacto/' ) ); ?>","kind":"custom","isTopLevelLink":true} /-->
 
 <!-- /wp:navigation --></div>
 <!-- /wp:column -->
 
 <!-- wp:column {"className":"footer-box3 wow bounceInUp"} -->
 <div class="wp-block-column footer-box3 wow bounceInUp"><!-- wp:heading {"level":4,"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"typography":{"fontSize":"26px","textTransform":"capitalize","fontStyle":"normal","fontWeight":"500"}},"textColor":"base","fontFamily":"heading"} -->
-<h4 class="wp-block-heading has-base-color has-text-color has-link-color has-heading-font-family" style="font-size:26px;font-style:normal;font-weight:500;text-transform:capitalize"><em><?php echo esc_html__( 'Our Services', 'trucking-services' ); ?></em></h4>
+<h4 class="wp-block-heading has-base-color has-text-color has-link-color has-heading-font-family" style="font-size:26px;font-style:normal;font-weight:500;text-transform:capitalize"><em><?php echo esc_html__( 'Nuestros Servicios', 'trucking-services' ); ?></em></h4>
 <!-- /wp:heading -->
 
 <!-- wp:list {"style":{"typography":{"fontSize":"14px"}}} -->
 <ul style="font-size:14px" class="wp-block-list"><!-- wp:list-item {"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"spacing":{"margin":{"bottom":"10px"}},"typography":{"textTransform":"capitalize"}},"textColor":"base"} -->
-<li class="has-base-color has-text-color has-link-color" style="margin-bottom:10px;text-transform:capitalize"><a href="#"><em><?php echo esc_html__( 'Full Truckload  Shipping', 'trucking-services' ); ?></em></a></li>
+<li class="has-base-color has-text-color has-link-color" style="margin-bottom:10px;text-transform:capitalize"><a href="<?php echo esc_url( home_url( '/servicios/transporte-de-carga-pesada/' ) ); ?>"><em><?php echo esc_html__( 'Transporte de Carga Pesada', 'trucking-services' ); ?></em></a></li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item {"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"spacing":{"margin":{"bottom":"10px"}},"typography":{"textTransform":"capitalize"}},"textColor":"base"} -->
-<li class="has-base-color has-text-color has-link-color" style="margin-bottom:10px;text-transform:capitalize"><a href="#"><em><?php echo esc_html__( 'Less Than Truckload  Freight', 'trucking-services' ); ?></em></a></li>
+<li class="has-base-color has-text-color has-link-color" style="margin-bottom:10px;text-transform:capitalize"><a href="<?php echo esc_url( home_url( '/servicios/transporte-de-carga-general/' ) ); ?>"><em><?php echo esc_html__( 'Transporte de Carga General', 'trucking-services' ); ?></em></a></li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item {"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"spacing":{"margin":{"bottom":"10px"}},"typography":{"textTransform":"capitalize"}},"textColor":"base"} -->
-<li class="has-base-color has-text-color has-link-color" style="margin-bottom:10px;text-transform:capitalize"><a href="#"><em><?php echo esc_html__( 'Refrigerated Transport', 'trucking-services' ); ?></em></a></li>
+<li class="has-base-color has-text-color has-link-color" style="margin-bottom:10px;text-transform:capitalize"><a href="<?php echo esc_url( home_url( '/servicios/transporte-corporativo/' ) ); ?>"><em><?php echo esc_html__( 'Transporte Corporativo', 'trucking-services' ); ?></em></a></li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item {"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"spacing":{"margin":{"bottom":"10px"}},"typography":{"textTransform":"capitalize"}},"textColor":"base"} -->
-<li class="has-base-color has-text-color has-link-color" style="margin-bottom:10px;text-transform:capitalize"><a href="#"><em><?php echo esc_html__( 'Express Cargo Delivery', 'trucking-services' ); ?></em></a></li>
+<li class="has-base-color has-text-color has-link-color" style="margin-bottom:10px;text-transform:capitalize"><a href="<?php echo esc_url( home_url( '/servicios/transporte-con-vehiculos-menores/' ) ); ?>"><em><?php echo esc_html__( 'Transporte con Vehículos Menores', 'trucking-services' ); ?></em></a></li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item {"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"spacing":{"margin":{"bottom":"10px"}},"typography":{"textTransform":"capitalize"}},"textColor":"base"} -->
-<li class="has-base-color has-text-color has-link-color" style="margin-bottom:10px;text-transform:capitalize"><a href="#"><em><?php echo esc_html__( 'Cross-Border Logistics', 'trucking-services' ); ?></em></a></li>
+<li class="has-base-color has-text-color has-link-color" style="margin-bottom:10px;text-transform:capitalize"><a href="<?php echo esc_url( home_url( '/servicios/servicios-especiales/' ) ); ?>"><em><?php echo esc_html__( 'Servicios Especiales', 'trucking-services' ); ?></em></a></li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item {"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"spacing":{"margin":{"bottom":"10px"}},"typography":{"textTransform":"capitalize"}},"textColor":"base"} -->
-<li class="has-base-color has-text-color has-link-color" style="margin-bottom:10px;text-transform:capitalize"><a href="#"><em><?php echo esc_html__( 'Warehouse & Distribution', 'trucking-services' ); ?></em></a></li>
+<li class="has-base-color has-text-color has-link-color" style="margin-bottom:10px;text-transform:capitalize"><a href="<?php echo esc_url( home_url( '/servicios/' ) ); ?>"><em><?php echo esc_html__( 'Ver todos los servicios', 'trucking-services' ); ?></em></a></li>
 <!-- /wp:list-item --></ul>
 <!-- /wp:list --></div>
 <!-- /wp:column -->
 
 <!-- wp:column {"className":"footer-box4 wow bounceInUp"} -->
 <div class="wp-block-column footer-box4 wow bounceInUp"><!-- wp:heading {"level":4,"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"typography":{"fontSize":"26px","textTransform":"capitalize","fontStyle":"normal","fontWeight":"500"}},"textColor":"base","fontFamily":"heading"} -->
-<h4 class="wp-block-heading has-base-color has-text-color has-link-color has-heading-font-family" style="font-size:26px;font-style:normal;font-weight:500;text-transform:capitalize"><em><?php echo esc_html__( 'social media', 'trucking-services' ); ?></em></h4>
+<h4 class="wp-block-heading has-base-color has-text-color has-link-color has-heading-font-family" style="font-size:26px;font-style:normal;font-weight:500;text-transform:capitalize"><em><?php echo esc_html__( 'Síguenos', 'trucking-services' ); ?></em></h4>
 <!-- /wp:heading -->
 
 <!-- wp:social-links {"iconColor":"base","iconColorValue":"#ffffff","openInNewTab":true,"showLabels":true,"className":"is-style-logos-only footer-social-box","layout":{"type":"flex","orientation":"vertical"}} -->
-<ul class="wp-block-social-links has-visible-labels has-icon-color is-style-logos-only footer-social-box"><!-- wp:social-link {"url":"www.youtube.com","service":"youtube"} /-->
+<ul class="wp-block-social-links has-visible-labels has-icon-color is-style-logos-only footer-social-box"><!-- wp:social-link {"url":"https://www.linkedin.com/","service":"linkedin"} /-->
 
-<!-- wp:social-link {"url":"www.instagram.com","service":"instagram"} /-->
+<!-- wp:social-link {"url":"https://www.instagram.com/","service":"instagram"} /-->
 
-<!-- wp:social-link {"url":"www.x.com","service":"x"} /-->
+<!-- wp:social-link {"url":"https://wa.me/51999999999","service":"whatsapp"} /-->
 
-<!-- wp:social-link {"url":"www.pinterest.com","service":"pinterest"} /-->
+<!-- wp:social-link {"url":"https://www.tiktok.com/","service":"tiktok"} /-->
 
-<!-- wp:social-link {"url":"www.facebook.com","service":"facebook"} /--></ul>
+<!-- wp:social-link {"url":"https://www.facebook.com/","service":"facebook"} /--></ul>
 <!-- /wp:social-links --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
 
 <!-- wp:paragraph {"align":"center","className":"footer-copyright","style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"spacing":{"padding":{"top":"30px","bottom":"30px"}},"border":{"top":{"color":"var:preset|color|base","width":"1px"}}},"textColor":"base"} -->
-<p class="has-text-align-center footer-copyright has-base-2-color has-text-color has-link-color" style="border-top-color:var(--wp--preset--color--base-2);border-top-width:1px;padding-top:30px;padding-bottom:30px;color:#fff"><a rel="noreferrer noopener" href="https://www.theclassictemplates.com/products/trucking-services" target="_blank"><?php echo esc_html__( 'Trucking Services Theme', 'trucking-services' ); ?></a><?php echo esc_html__( ' By Classic Templates', 'trucking-services' ); ?></p>
+<p class="has-text-align-center footer-copyright has-base-2-color has-text-color has-link-color" style="border-top-color:var(--wp--preset--color--base-2);border-top-width:1px;padding-top:30px;padding-bottom:30px;color:#fff"><?php echo esc_html( sprintf( __( '© %s Inversiones & Transporte Roma. Todos los derechos reservados.', 'trucking-services' ), gmdate( 'Y' ) ) ); ?></p>
 
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
