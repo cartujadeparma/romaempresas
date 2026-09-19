@@ -35,7 +35,7 @@ if ( $trucking_services_results )  {
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"footer-location","style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"typography":{"fontSize":"14px"}},"textColor":"base"} -->
-<p class="footer-location has-base-color has-text-color has-link-color" style="font-size:14px"><a href="https://www.google.com/maps/search/?api=1&query=Jr.+El+Tesoro+497+Urb.+T%C3%BApac+Amaru+San+Luis+Lima+Peru" target="_blank" rel="noreferrer noopener"><i class="fa-solid fa-location-dot"></i><?php echo esc_html__( 'Jr. El Tesoro 497, Urb. Túpac Amaru, San Luis, Lima 15021, Perú', 'trucking-services' ); ?></a></p>
+<p class="footer-location has-base-color has-text-color has-link-color" style="font-size:14px"><a href="https://www.google.com/maps/search/?api=1&query=Jr.+El+Tesoro+497+Urb.+T%C3%BApac+Amaru+San+Luis+Lima+Peru" target="_blank" rel="noreferrer noopener"><i class="fa-solid fa-location-dot"></i><?php echo esc_html__( 'Jr. El Tesoro 497 Urb. Túpac Amaru, San Luis, Lima 15021, Perú', 'trucking-services' ); ?></a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
@@ -148,7 +148,7 @@ if ( $trucking_services_results )  {
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"footer-location","style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"typography":{"fontSize":"14px"}},"textColor":"base"} -->
-<p class="footer-location has-base-color has-text-color has-link-color" style="font-size:14px"><a href="https://www.google.com/maps/search/?api=1&query=Jr.+El+Tesoro+497+Urb.+T%C3%BApac+Amaru+San+Luis+Lima+Peru" target="_blank" rel="noreferrer noopener"><i class="fa-solid fa-location-dot"></i><?php echo esc_html__( 'Jr. El Tesoro 497, Urb. Túpac Amaru, San Luis, Lima 15021, Perú', 'trucking-services' ); ?></a></p>
+<p class="footer-location has-base-color has-text-color has-link-color" style="font-size:14px"><a href="https://www.google.com/maps/search/?api=1&query=Jr.+El+Tesoro+497+Urb.+T%C3%BApac+Amaru+San+Luis+Lima+Peru" target="_blank" rel="noreferrer noopener"><i class="fa-solid fa-location-dot"></i><?php echo esc_html__( 'Jr. El Tesoro 497 Urb. Túpac Amaru, San Luis, Lima 15021, Perú', 'trucking-services' ); ?></a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 

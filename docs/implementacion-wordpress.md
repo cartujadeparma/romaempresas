@@ -122,7 +122,7 @@ sitio), no en el contenido, así que deben hacerse una vez desde el panel:
      recibir/enviar desde esta cuenta hay problemas de entrega, considera
      usar una variante sin tilde (p. ej. `atencionalcliente@romaempresas.com`)
      y actualizar `footer.php` en consecuencia.
-   - Dirección: `Jr. El Tesoro 497, Urb. Túpac Amaru, San Luis, Lima 15021,
+   - Dirección: `Jr. El Tesoro 497 Urb. Túpac Amaru, San Luis, Lima 15021,
      Perú`, enlazada a una búsqueda de Google Maps.
    - Redes sociales: solo **Facebook**
      (`https://www.facebook.com/profile.php?id=100064050996376`) y
