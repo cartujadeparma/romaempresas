@@ -18,9 +18,9 @@ usando el tema **Trucking Services**.
   testimonios en *lorem ipsum*); ya están traducidos al español y adaptados
   a **Inversiones & Transporte Roma** (textos, botones, menú, footer, 404,
   barra lateral), con los enlaces apuntando a las páginas reales del sitio.
-  El teléfono, correo, dirección y redes sociales del footer quedan como
-  marcadores de posición reconocibles (ver paso 4 de la sección 4) hasta que
-  se reemplacen por los datos reales de la empresa.
+  El teléfono, correo, dirección y redes sociales del footer ya usan los
+  datos reales de la empresa (ver paso 4 de la sección 4 para el detalle y
+  una nota sobre el correo con tilde).
 - **Plugins recomendados por el propio tema** (vía TGM, ya vendorizados en
   `wp-content/plugins`): **Contact Form 7** (formularios) y **Classic Blog
   Grid** (listado de Blog/Noticias).
@@ -107,21 +107,29 @@ sitio), no en el contenido, así que deben hacerse una vez desde el panel:
    bloques) → edita la parte de plantilla **Header** → selecciona el bloque
    **Navigation** → en sus opciones, *Importar menú clásico* / *Seleccionar
    menú* → elige **"Menú principal"**. Guarda la parte de plantilla.
-3. **Enlace real de WhatsApp**: edita el ítem *WhatsApp* del menú (en
-   `Apariencia > Menús` o desde el propio bloque Navigation) y reemplaza
-   `https://wa.me/51XXXXXXXXX` por el número real de la empresa (y, si se
-   desea, un mensaje predefinido vía `?text=`).
-4. **Datos de contacto del tema**: `patterns/footer.php` (y el botón
-   "Solicitar cotización" del header) ya están en español y con textos
-   propios de Inversiones & Transporte Roma, pero el teléfono
-   (`+51 999 999 999`), el correo (`contacto@romaempresas.pe`), la
-   dirección (`Av. Argentina 1234, Callao, Lima, Perú`) y las redes
-   sociales (Facebook, Instagram, LinkedIn, WhatsApp, TikTok — todas con
-   URL genérica) son marcadores de posición. Reemplázalos por los datos
-   reales de la empresa antes de publicar (se pueden editar directamente en
-   `wp-content/themes/trucking-services/patterns/footer.php`, o desde el
-   editor de sitio una vez que WordPress haya generado una copia
-   personalizada de esa parte de plantilla).
+3. **Enlace de WhatsApp**: el ítem *WhatsApp* del menú ya apunta a
+   `https://wa.me/51936820612` (número real de la empresa). Si se desea, se
+   le puede añadir un mensaje predefinido vía `?text=` editando el ítem en
+   `Apariencia > Menús` o desde el propio bloque Navigation.
+4. **Datos de contacto del tema**: `patterns/footer.php`, `patterns/sidebar.php`
+   y el enlace de WhatsApp del menú (WXR) ya usan los datos reales de la
+   empresa:
+   - Teléfono / WhatsApp: `+51 936 820 612` (`https://wa.me/51936820612`).
+   - Correo: `atencionalcliente@romaempresas.com` (sin tilde, para máxima
+     compatibilidad con clientes de email y servidores SMTP).
+   - Dirección: `Jr. El Tesoro 497 Urb. Túpac Amaru, San Luis, Lima 15021,
+     Perú`, enlazada a una búsqueda de Google Maps.
+   - Redes sociales: solo **Facebook**
+     (`https://www.facebook.com/profile.php?id=100064050996376`) y
+     **WhatsApp** están publicados en el footer y en la barra lateral del
+     blog; Instagram, LinkedIn y TikTok se quitaron porque la empresa
+     todavía no tiene esas cuentas — vuelve a añadirlas (en
+     `patterns/footer.php` y `patterns/sidebar.php`, bloque
+     `wp:social-links`) cuando existan.
+   Estos valores se pueden editar directamente en
+   `wp-content/themes/trucking-services/patterns/footer.php` y
+   `patterns/sidebar.php`, o desde el editor de sitio una vez que WordPress
+   haya generado una copia personalizada de esas partes de plantilla.
 5. **Formularios**: crea los formularios en `Contact > Formularios de
    contacto` (Contact Form 7) para "Solicitar cotización" (tipo de carga,
    origen/destino, volumen, fecha) y "Formulario de contacto" (nombre,

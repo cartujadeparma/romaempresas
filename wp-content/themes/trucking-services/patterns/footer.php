@@ -27,15 +27,15 @@ if ( $trucking_services_results )  {
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"footer-phone","style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"typography":{"fontSize":"14px"}},"textColor":"base"} -->
-<p class="footer-phone has-base-color has-text-color has-link-color" style="font-size:14px"><a href="tel:+51999999999"><i class="fa-solid fa-phone"></i><?php echo esc_html__( '+51 999 999 999', 'trucking-services' ); ?></a></p>
+<p class="footer-phone has-base-color has-text-color has-link-color" style="font-size:14px"><a href="tel:+51936820612"><i class="fa-solid fa-phone"></i><?php echo esc_html__( '+51 936 820 612', 'trucking-services' ); ?></a></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"footer-mail","style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"typography":{"fontSize":"14px"}},"textColor":"base"} -->
-<p class="footer-mail has-base-color has-text-color has-link-color" style="font-size:14px"><a href="mailto:contacto@romaempresas.pe"><i class="fa-regular fa-envelope"></i><?php echo esc_html__( 'contacto@romaempresas.pe', 'trucking-services' ); ?></a></p>
+<p class="footer-mail has-base-color has-text-color has-link-color" style="font-size:14px"><a href="mailto:atencionalcliente@romaempresas.com"><i class="fa-regular fa-envelope"></i><?php echo esc_html__( 'atencionalcliente@romaempresas.com', 'trucking-services' ); ?></a></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"footer-location","style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"typography":{"fontSize":"14px"}},"textColor":"base"} -->
-<p class="footer-location has-base-color has-text-color has-link-color" style="font-size:14px"><a href="#"><i class="fa-solid fa-location-dot"></i><?php echo esc_html__( 'Av. Argentina 1234, Callao, Lima, Perú', 'trucking-services' ); ?></a></p>
+<p class="footer-location has-base-color has-text-color has-link-color" style="font-size:14px"><a href="https://www.google.com/maps/search/?api=1&query=Jr.+El+Tesoro+497+Urb.+T%C3%BApac+Amaru+San+Luis+Lima+Peru" target="_blank" rel="noreferrer noopener"><i class="fa-solid fa-location-dot"></i><?php echo esc_html__( 'Jr. El Tesoro 497 Urb. Túpac Amaru, San Luis, Lima 15021, Perú', 'trucking-services' ); ?></a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
@@ -95,15 +95,9 @@ if ( $trucking_services_results )  {
 <!-- /wp:heading -->
 
 <!-- wp:social-links {"iconColor":"base","iconColorValue":"#ffffff","openInNewTab":true,"showLabels":true,"className":"is-style-logos-only footer-social-box","layout":{"type":"flex","orientation":"vertical"}} -->
-<ul class="wp-block-social-links has-visible-labels has-icon-color is-style-logos-only footer-social-box"><!-- wp:social-link {"url":"https://www.linkedin.com/","service":"linkedin"} /-->
+<ul class="wp-block-social-links has-visible-labels has-icon-color is-style-logos-only footer-social-box"><!-- wp:social-link {"url":"https://www.facebook.com/profile.php?id=100064050996376","service":"facebook"} /-->
 
-<!-- wp:social-link {"url":"https://www.instagram.com/","service":"instagram"} /-->
-
-<!-- wp:social-link {"url":"https://wa.me/51999999999","service":"whatsapp"} /-->
-
-<!-- wp:social-link {"url":"https://www.tiktok.com/","service":"tiktok"} /-->
-
-<!-- wp:social-link {"url":"https://www.facebook.com/","service":"facebook"} /--></ul>
+<!-- wp:social-link {"url":"https://wa.me/51936820612","service":"whatsapp"} /--></ul>
 <!-- /wp:social-links --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
@@ -146,15 +140,15 @@ if ( $trucking_services_results )  {
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"footer-phone","style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"typography":{"fontSize":"14px"}},"textColor":"base"} -->
-<p class="footer-phone has-base-color has-text-color has-link-color" style="font-size:14px"><a href="tel:+51999999999"><i class="fa-solid fa-phone"></i><?php echo esc_html__( '+51 999 999 999', 'trucking-services' ); ?></a></p>
+<p class="footer-phone has-base-color has-text-color has-link-color" style="font-size:14px"><a href="tel:+51936820612"><i class="fa-solid fa-phone"></i><?php echo esc_html__( '+51 936 820 612', 'trucking-services' ); ?></a></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"footer-mail","style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"typography":{"fontSize":"14px"}},"textColor":"base"} -->
-<p class="footer-mail has-base-color has-text-color has-link-color" style="font-size:14px"><a href="mailto:contacto@romaempresas.pe"><i class="fa-regular fa-envelope"></i><?php echo esc_html__( 'contacto@romaempresas.pe', 'trucking-services' ); ?></a></p>
+<p class="footer-mail has-base-color has-text-color has-link-color" style="font-size:14px"><a href="mailto:atencionalcliente@romaempresas.com"><i class="fa-regular fa-envelope"></i><?php echo esc_html__( 'atencionalcliente@romaempresas.com', 'trucking-services' ); ?></a></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"footer-location","style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"typography":{"fontSize":"14px"}},"textColor":"base"} -->
-<p class="footer-location has-base-color has-text-color has-link-color" style="font-size:14px"><a href="#"><i class="fa-solid fa-location-dot"></i><?php echo esc_html__( 'Av. Argentina 1234, Callao, Lima, Perú', 'trucking-services' ); ?></a></p>
+<p class="footer-location has-base-color has-text-color has-link-color" style="font-size:14px"><a href="https://www.google.com/maps/search/?api=1&query=Jr.+El+Tesoro+497+Urb.+T%C3%BApac+Amaru+San+Luis+Lima+Peru" target="_blank" rel="noreferrer noopener"><i class="fa-solid fa-location-dot"></i><?php echo esc_html__( 'Jr. El Tesoro 497 Urb. Túpac Amaru, San Luis, Lima 15021, Perú', 'trucking-services' ); ?></a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
@@ -216,15 +210,9 @@ if ( $trucking_services_results )  {
 <!-- /wp:heading -->
 
 <!-- wp:social-links {"iconColor":"base","iconColorValue":"#ffffff","openInNewTab":true,"showLabels":true,"className":"is-style-logos-only footer-social-box","layout":{"type":"flex","orientation":"vertical"}} -->
-<ul class="wp-block-social-links has-visible-labels has-icon-color is-style-logos-only footer-social-box"><!-- wp:social-link {"url":"https://www.linkedin.com/","service":"linkedin"} /-->
+<ul class="wp-block-social-links has-visible-labels has-icon-color is-style-logos-only footer-social-box"><!-- wp:social-link {"url":"https://www.facebook.com/profile.php?id=100064050996376","service":"facebook"} /-->
 
-<!-- wp:social-link {"url":"https://www.instagram.com/","service":"instagram"} /-->
-
-<!-- wp:social-link {"url":"https://wa.me/51999999999","service":"whatsapp"} /-->
-
-<!-- wp:social-link {"url":"https://www.tiktok.com/","service":"tiktok"} /-->
-
-<!-- wp:social-link {"url":"https://www.facebook.com/","service":"facebook"} /--></ul>
+<!-- wp:social-link {"url":"https://wa.me/51936820612","service":"whatsapp"} /--></ul>
 <!-- /wp:social-links --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
