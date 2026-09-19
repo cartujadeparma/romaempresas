@@ -115,13 +115,8 @@ sitio), no en el contenido, así que deben hacerse una vez desde el panel:
    y el enlace de WhatsApp del menú (WXR) ya usan los datos reales de la
    empresa:
    - Teléfono / WhatsApp: `+51 936 820 612` (`https://wa.me/51936820612`).
-   - Correo: `atenciónalcliente@romaempresas.com`. **Nota técnica**: la
-     tilde en "atención" hace que este correo no sea válido para todos los
-     clientes de email (la parte anterior a la `@` debería ser ASCII para
-     máxima compatibilidad SMTP). Si al probar el enlace `mailto:` o al
-     recibir/enviar desde esta cuenta hay problemas de entrega, considera
-     usar una variante sin tilde (p. ej. `atencionalcliente@romaempresas.com`)
-     y actualizar `footer.php` en consecuencia.
+   - Correo: `atencionalcliente@romaempresas.com` (sin tilde, para máxima
+     compatibilidad con clientes de email y servidores SMTP).
    - Dirección: `Jr. El Tesoro 497 Urb. Túpac Amaru, San Luis, Lima 15021,
      Perú`, enlazada a una búsqueda de Google Maps.
    - Redes sociales: solo **Facebook**

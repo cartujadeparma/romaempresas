@@ -31,7 +31,7 @@ if ( $trucking_services_results )  {
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"footer-mail","style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"typography":{"fontSize":"14px"}},"textColor":"base"} -->
-<p class="footer-mail has-base-color has-text-color has-link-color" style="font-size:14px"><a href="mailto:atenciónalcliente@romaempresas.com"><i class="fa-regular fa-envelope"></i><?php echo esc_html__( 'atenciónalcliente@romaempresas.com', 'trucking-services' ); ?></a></p>
+<p class="footer-mail has-base-color has-text-color has-link-color" style="font-size:14px"><a href="mailto:atencionalcliente@romaempresas.com"><i class="fa-regular fa-envelope"></i><?php echo esc_html__( 'atencionalcliente@romaempresas.com', 'trucking-services' ); ?></a></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"footer-location","style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"typography":{"fontSize":"14px"}},"textColor":"base"} -->
@@ -144,7 +144,7 @@ if ( $trucking_services_results )  {
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"footer-mail","style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"typography":{"fontSize":"14px"}},"textColor":"base"} -->
-<p class="footer-mail has-base-color has-text-color has-link-color" style="font-size:14px"><a href="mailto:atenciónalcliente@romaempresas.com"><i class="fa-regular fa-envelope"></i><?php echo esc_html__( 'atenciónalcliente@romaempresas.com', 'trucking-services' ); ?></a></p>
+<p class="footer-mail has-base-color has-text-color has-link-color" style="font-size:14px"><a href="mailto:atencionalcliente@romaempresas.com"><i class="fa-regular fa-envelope"></i><?php echo esc_html__( 'atencionalcliente@romaempresas.com', 'trucking-services' ); ?></a></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"footer-location","style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"typography":{"fontSize":"14px"}},"textColor":"base"} -->
