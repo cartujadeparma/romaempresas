@@ -2,9 +2,9 @@
 Contributors: classictemplate
 Tags: left-sidebar, right-sidebar, one-column, two-columns, three-columns, four-columns, grid-layout, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, sticky-post, threaded-comments, translation-ready, wide-blocks, block-styles, footer-widgets, template-editing, rtl-language-support, style-variations, blog, photography, portfolio
 Requires at least: 5.0
-Tested up to: 7.0
+Tested up to: 7.1
 Requires PHP: 5.6
-Stable tag: 0.2.1
+Stable tag: 0.2.2
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -160,3 +160,6 @@ License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
 
 = 0.2.1 =
 * Optimized Frontend Performance.
+
+= 0.2.2 =
+* UI and UX Improvements.

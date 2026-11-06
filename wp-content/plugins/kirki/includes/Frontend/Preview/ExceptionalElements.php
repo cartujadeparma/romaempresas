@@ -409,6 +409,7 @@ class ExceptionalElements {
 					'id'        => $this_data['id'],
 					'hamburger' => $hamburger,
 					'showNavigationChildrenOn' => isset($this_data['properties']['navigation']['showNavigationChildrenOn']) ? $this_data['properties']['navigation']['showNavigationChildrenOn'] : 'hover',
+					'version' => isset($this_data['properties']['navigation']['version']) ? $this_data['properties']['navigation']['version'] : null,
 				),
 			)
 		);
@@ -423,8 +424,6 @@ class ExceptionalElements {
 	private function navigation_item_element($this_data, $attributes, $options)
 	{
 		$tag = isset($this_data['properties'], $this_data['properties']['tag']) ? $this_data['properties']['tag'] : 'a';
-
-		$children_markup = $this->construct_children_markup(isset($this_data['children']) ? $this_data['children'] : array(), $options);
 
 		$extra_attributes = '';
 
@@ -471,6 +470,9 @@ class ExceptionalElements {
 
 		$extra_attr = isset($options['inside_navigation']) && $options['inside_navigation'] ? 'kirki-navigation-hide="true"' : '';
 
+		$version = isset($options['navigation']['version']) ? $options['navigation']['version'] : null;
+
+
 		if (isset($options['navigation']['hamburger']) && $options['navigation']['hamburger']) {
 			$extra_attr .= ' kirki-navigation-type="close"';
 		}
@@ -495,6 +497,15 @@ class ExceptionalElements {
 
 			$class = $classMatch[1] ?? null;
 			$data_kirki = $dataMatch[1] ?? null;
+
+
+			if ($version === 'v2') {
+				return "
+							<$tag class='$class' data-kirki='$data_kirki' kirki-menu-wrapper-ul='true'>
+							$children_markup
+							</$tag>
+					 ";
+			}
 
 			return "
 							<div kirki-menu-wrapper-div='true'>
@@ -791,6 +802,18 @@ class ExceptionalElements {
 		if(isset($options['inside_symbol']) && $options['inside_symbol'] === true){
 			$collection_info['post_id'] = $options['symbol_id'];
 		}
+
+		// Staging preview (?staging_version=N&nonce=...): pass the version on, so "load more",
+		// pagination and filters render the same version. The endpoint checks the nonce again.
+		//phpcs:ignore WordPress.Security.NonceVerification.Recommended,WordPress.Security.ValidatedSanitizedInput.MissingUnslash,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		$staging_version = isset( $_GET['staging_version'] ) ? intval( HelperFunctions::sanitize_text( $_GET['staging_version'] ) ) : false;
+		//phpcs:ignore WordPress.Security.NonceVerification.Recommended,WordPress.Security.ValidatedSanitizedInput.MissingUnslash,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		$nonce = HelperFunctions::sanitize_text( isset( $_GET['nonce'] ) ? $_GET['nonce'] : '' );
+		if ( $staging_version && (int) $collection_info['post_id'] === get_queried_object_id() && wp_verify_nonce( $nonce, 'kirki_preview_staging_nonce' ) ) {
+			$collection_info['staging_version'] = $staging_version;
+			$collection_info['staging_nonce'] = $nonce;
+		}
+
 		return $collection_info;
 	}
 
@@ -1177,6 +1200,8 @@ class ExceptionalElements {
 
 		$str = '';
 
+		$src = esc_url( $src );
+
 		if ( $svg_outer_html ) {
 			$str .= '<img ' . $attributes . ' src="' . $src . '"/>
                <span>' . $svg_outer_html . '</span>';
@@ -1326,8 +1351,8 @@ class ExceptionalElements {
 		$options['symbol_id'] = $symbol_id;
 		$options['inside_symbol'] = true;
 
-		$s           = HelperFunctions::rec_update_data_id_then_return_new_html( $symbol_data['data'], $symbol_data['styleBlocks'], $symbol_data['root'], $options );
-		return '<div ' . $attributes . '>' . $s . '</div>';
+		$s = HelperFunctions::rec_update_data_id_then_return_new_html( $symbol_data['data'], $symbol_data['styleBlocks'], $symbol_data['root'], $options );
+		return '<div data-kirki-component-wrapper="true" ' . $attributes . '>' . $s . '</div>';
 	}
 
 	/**

@@ -2,9 +2,9 @@
 Contributors: misbahwp
 Tags: blog, portfolio, e-commerce, wide-blocks, one-column, two-columns, three-columns, four-columns, right-sidebar, left-sidebar, custom-background, custom-colors, custom-header, custom-logo, custom-menu, featured-images, footer-widgets, full-width-template, flexible-header, editor-style, theme-options, threaded-comments, rtl-language-support, sticky-post, translation-ready
 Requires at least: 5.0
-Stable tag: 6.1.3
+Stable tag: 6.1.5
 Requires PHP: 7.2
-Tested up to: 7.0
+Tested up to: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -346,6 +346,12 @@ Transcargo Transportation WordPress Theme is a versatile and feature-rich soluti
 
 = 6.1.3 =
 * Refined Design Elements.
+
+= 6.1.4 =
+* Design and Layout Updates.
+
+= 6.1.5 =
+* Enhanced Visual Appearance.
 == Resources ==
 
 Transcargo Transportation WordPress Theme, Copyright 2023 misbahwp

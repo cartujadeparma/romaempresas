@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Kirki 6.3.1\n"
+"Project-Id-Version: Kirki 6.4.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/kirki\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-09-15T12:05:42+00:00\n"
+"POT-Creation-Date: 2026-10-27T09:34:47+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: kirki\n"
@@ -1196,6 +1196,7 @@ msgstr ""
 
 #: customizer/packages/fields/dimensions/src/Dimensions.php:73
 #: customizer/packages/fields/typography/src/Field/Typography.php:356
+#: assets/js/kirki-editor.min.js:2
 msgid "Center"
 msgstr ""
 
@@ -1476,96 +1477,6 @@ msgid "Ultra-Bold 900 Italic"
 msgstr ""
 
 #: assets/js/kirki-editor.min.js:2
-#: assets/js/kirki.min.js:2
-msgid "A component cannot be inserted inside itself."
-msgstr ""
-
-#: assets/js/kirki-editor.min.js:2
-#: assets/js/kirki.min.js:2
-msgid "Something went wrong."
-msgstr ""
-
-#: assets/js/kirki-editor.min.js:2
-#: assets/js/kirki.min.js:2
-msgid "Saving data is not allowed in editor preview mode."
-msgstr ""
-
-#: assets/js/kirki-editor.min.js:2
-#: assets/js/kirki.min.js:2
-msgid "error"
-msgstr ""
-
-#: assets/js/kirki-editor.min.js:2
-msgid "Rename staging version failed."
-msgstr ""
-
-#: assets/js/kirki-editor.min.js:2
-msgid "Deleting staging version failed."
-msgstr ""
-
-#: assets/js/kirki-editor.min.js:2
-msgid "Failed to publish."
-msgstr ""
-
-#: assets/js/kirki-editor.min.js:2
-msgid "Restoring staging version failed."
-msgstr ""
-
-#: assets/js/kirki-editor.min.js:2
-msgid "Get app list error."
-msgstr ""
-
-#: assets/js/kirki-editor.min.js:2
-msgid "Settings not found!"
-msgstr ""
-
-#: assets/js/kirki-editor.min.js:2
-msgid "Failed to save settings."
-msgstr ""
-
-#: assets/js/kirki-editor.min.js:2
-msgid "App install failed."
-msgstr ""
-
-#: assets/js/kirki-editor.min.js:2
-msgid "App deletion failed."
-msgstr ""
-
-#: assets/js/kirki-editor.min.js:2
-msgid "App update failed."
-msgstr ""
-
-#: assets/js/kirki-editor.min.js:2
-msgid "Invalid access"
-msgstr ""
-
-#: assets/js/kirki-editor.min.js:2
-msgid "success"
-msgstr ""
-
-#: assets/js/kirki-editor.min.js:2
-msgid "Content manager data saved"
-msgstr ""
-
-#: assets/js/kirki-editor.min.js:2
-msgid "Content manager item data saved"
-msgstr ""
-
-#: assets/js/kirki-editor.min.js:2
-msgid "Updated"
-msgstr ""
-
-#: assets/js/kirki-editor.min.js:2
-#: assets/js/kirki.min.js:2
-msgid "Controller data saved failed."
-msgstr ""
-
-#: assets/js/kirki-editor.min.js:2
-#: assets/js/kirki.min.js:2
-msgid "User common data saved failed."
-msgstr ""
-
-#: assets/js/kirki-editor.min.js:2
 msgid "This field is required"
 msgstr ""
 
@@ -1655,6 +1566,92 @@ msgstr ""
 
 #: assets/js/kirki-editor.min.js:2
 msgid "Invalid color"
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+#: assets/js/kirki.min.js:2
+msgid "A component cannot contain itself directly or indirectly."
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+#: assets/js/kirki.min.js:2
+msgid "Something went wrong."
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+#: assets/js/kirki.min.js:2
+msgid "Saving data is not allowed in editor preview mode."
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+#: assets/js/kirki.min.js:2
+msgid "error"
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "Rename staging version failed."
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "Deleting staging version failed."
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "Failed to publish."
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "Restoring staging version failed."
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "Get app list error."
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "Settings not found!"
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "Failed to save settings."
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "App deletion failed."
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "App update failed."
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "Invalid access"
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "success"
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "Content manager data saved"
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "Content manager item data saved"
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "Updated"
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+#: assets/js/kirki.min.js:2
+msgid "Controller data saved failed."
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+#: assets/js/kirki.min.js:2
+msgid "User common data saved failed."
 msgstr ""
 
 #: assets/js/kirki-editor.min.js:2
@@ -1827,11 +1824,27 @@ msgid "Move"
 msgstr ""
 
 #: assets/js/kirki-editor.min.js:2
+msgid "Frame"
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
 msgid "Text"
 msgstr ""
 
 #: assets/js/kirki-editor.min.js:2
 msgid "Video"
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "Pen Tool"
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "Rectangle Shape"
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "Circle Shape"
 msgstr ""
 
 #: assets/js/kirki-editor.min.js:2
@@ -1927,7 +1940,7 @@ msgid "Align center vertically"
 msgstr ""
 
 #: assets/js/kirki-editor.min.js:2
-msgid "Padding/margin all inputs at once"
+msgid "Padding all inputs at once"
 msgstr ""
 
 #: assets/js/kirki-editor.min.js:2
@@ -2295,6 +2308,10 @@ msgid "Offset"
 msgstr ""
 
 #: assets/js/kirki-editor.min.js:2
+msgid "Collection"
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
 msgid "Fields"
 msgstr ""
 
@@ -2424,6 +2441,18 @@ msgstr ""
 
 #: assets/js/kirki-editor.min.js:2
 msgid "Symbol reset to parent symbol"
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "Unwrap the component root separately from other elements."
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "The component root can only be unwrapped into one regular element."
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "Unable to identify the component being wrapped."
 msgstr ""
 
 #: assets/js/kirki-editor.min.js:2
@@ -2632,7 +2661,7 @@ msgid "Icon"
 msgstr ""
 
 #: assets/js/kirki-editor.min.js:2
-msgid "SVG"
+msgid "Vector"
 msgstr ""
 
 #: assets/js/kirki-editor.min.js:2
@@ -2665,10 +2694,6 @@ msgstr ""
 
 #: assets/js/kirki-editor.min.js:2
 msgid "Lightbox"
-msgstr ""
-
-#: assets/js/kirki-editor.min.js:2
-msgid "Collection"
 msgstr ""
 
 #: assets/js/kirki-editor.min.js:2
@@ -4045,10 +4070,6 @@ msgid "Zoom buttons"
 msgstr ""
 
 #: assets/js/kirki-editor.min.js:2
-msgid "Street button"
-msgstr ""
-
-#: assets/js/kirki-editor.min.js:2
 msgid "Full Screen button"
 msgstr ""
 
@@ -4125,11 +4146,19 @@ msgid "On Click"
 msgstr ""
 
 #: assets/js/kirki-editor.min.js:2
-msgid "Open on"
+msgid "Show"
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "Hide"
 msgstr ""
 
 #: assets/js/kirki-editor.min.js:2
 msgid "State"
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "Open on"
 msgstr ""
 
 #: assets/js/kirki-editor.min.js:2
@@ -4169,6 +4198,10 @@ msgid "Add state"
 msgstr ""
 
 #: assets/js/kirki-editor.min.js:2
+msgid "Path"
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
 msgid "Edit class"
 msgstr ""
 
@@ -4178,6 +4211,14 @@ msgstr ""
 
 #: assets/js/kirki-editor.min.js:2
 msgid "Static link"
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "Select multi-reference"
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "Select reference"
 msgstr ""
 
 #: assets/js/kirki-editor.min.js:2
@@ -4253,6 +4294,10 @@ msgid "Opacity"
 msgstr ""
 
 #: assets/js/kirki-editor.min.js:2
+msgid "Fill"
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
 msgid "Collection options"
 msgstr ""
 
@@ -4310,6 +4355,66 @@ msgstr ""
 
 #: assets/js/kirki-editor.min.js:2
 msgid "Add pagination"
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "Inside"
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "Align"
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "Butt"
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "Round"
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "Square"
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "Miter"
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "Bevel"
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "End points"
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "Join"
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "Gap"
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "Stroke"
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "Straight"
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "Mirrored"
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "Individual"
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "Join style"
 msgstr ""
 
 #: assets/js/kirki-editor.min.js:2
@@ -4490,11 +4595,19 @@ msgid "Cursor"
 msgstr ""
 
 #: assets/js/kirki-editor.min.js:2
+msgid "Apply same interaction to see preview"
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
 msgid "Custom breakpoint list is empty!"
 msgstr ""
 
 #: assets/js/kirki-editor.min.js:2
 msgid "Breakpoints"
+msgstr ""
+
+#: assets/js/kirki-editor.min.js:2
+msgid "Mixed interactions. Add any interaction to replace."
 msgstr ""
 
 #: assets/js/kirki-editor.min.js:2
@@ -4894,39 +5007,7 @@ msgid "Enable or disable JSON file uploads for data exchange and configuration. 
 msgstr ""
 
 #: assets/js/kirki-editor.min.js:2
-msgid "No Access"
-msgstr ""
-
-#: assets/js/kirki-editor.min.js:2
-msgid "Full Access"
-msgstr ""
-
-#: assets/js/kirki-editor.min.js:2
-msgid "Content Only"
-msgstr ""
-
-#: assets/js/kirki-editor.min.js:2
-msgid "View Only"
-msgstr ""
-
-#: assets/js/kirki-editor.min.js:2
-msgid "Access updated"
-msgstr ""
-
-#: assets/js/kirki-editor.min.js:2
-msgid "Update failed"
-msgstr ""
-
-#: assets/js/kirki-editor.min.js:2
-msgid "Role manager"
-msgstr ""
-
-#: assets/js/kirki-editor.min.js:2
 msgid "Back to admin"
-msgstr ""
-
-#: assets/js/kirki.min.js:2
-msgid "Failed! Please try again"
 msgstr ""
 
 #: assets/js/kirki.min.js:2
@@ -4936,4 +5017,8 @@ msgstr ""
 
 #: assets/js/kirki.min.js:2
 msgid "Attachment Failed!"
+msgstr ""
+
+#: assets/js/kirki.min.js:2
+msgid "Failed! Please try again"
 msgstr ""

@@ -140,7 +140,7 @@ msgid "WordPress Theme Bundle"
 msgstr ""
 
 #: inc/addon.php:85
-msgid "Get access to a collection of 100+ stunning WordPress themes for just $99 — featuring designs for every business niche!"
+msgid "Get access to a collection of 112+ stunning WordPress themes for just $89 — featuring designs for every business niche!"
 msgstr ""
 
 #: inc/addon.php:87
@@ -158,7 +158,7 @@ msgid "View Demo"
 msgstr ""
 
 #: inc/addon.php:105
-msgid "Bundle of 100+ Themes at $99"
+msgid "Bundle of 112+ Themes at $89"
 msgstr ""
 
 #. translators: 1: Theme name, 2: Author name, 3: Call to action text.

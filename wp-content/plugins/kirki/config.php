@@ -139,13 +139,11 @@ if (!defined('KIRKI_ACCESS_LEVELS')) {
 		array(
 			'NO_ACCESS' => 'no',
 			'FULL_ACCESS' => 'full',
+			'EDITOR_ACCESS' => 'editor',
 			'CONTENT_ACCESS' => 'content',
 			'VIEW_ACCESS' => 'view',
 		)
 	);
-}
-if (!defined('KIRKI_USERS_DEFAULT_FULL_ACCESS')) {
-	define('KIRKI_USERS_DEFAULT_FULL_ACCESS', array('administrator', 'editor'));
 }
 
 /* Custom DB table names */
@@ -163,6 +161,12 @@ if (!defined('KIRKI_CM_REFERENCE_TABLE')) {
 }
 if (!defined('KIRKI_COMMENTS_TABLE')) {
 	define('KIRKI_COMMENTS_TABLE', 'kirki_comments');
+}
+if (!defined('KIRKI_PAGE_STAGES_TABLE')) {
+	define('KIRKI_PAGE_STAGES_TABLE', 'kirki_stages');
+}
+if (!defined('KIRKI_PAGE_STAGE_DATA_TABLE')) {
+	define('KIRKI_PAGE_STAGE_DATA_TABLE', 'kirki_stage_data');
 }
 /* Custom DB table names */
 

@@ -54,7 +54,7 @@ class CollaborationCommentService
 
         $is_author = $comment->user_id === user()->get_id();
 
-        return $is_author || user()->has_access(AccessLevels::FULL_ACCESS);
+        return $is_author || user()->has_builder_access();
     }
 
     /**
@@ -304,9 +304,17 @@ class CollaborationCommentService
     {
         $roles = Role::get_roles_by_levels([
             AccessLevels::FULL_ACCESS,
+            AccessLevels::EDITOR_ACCESS,
             AccessLevels::CONTENT_ACCESS,
             AccessLevels::VIEW_ACCESS,
         ]);
+
+        $search_columns = ['user_login', 'user_nicename', 'display_name'];
+
+        // Searching by email lets anyone guess addresses one character at a time.
+        if (current_user_can('list_users')) {
+            $search_columns[] = 'user_email';
+        }
 
         return get_users([
             'role__in' => $roles,
@@ -314,7 +322,7 @@ class CollaborationCommentService
             'order' => 'ASC',
             'number' => $limit,
             'search' => '*' . $query . '*',
-            'search_columns' => ['user_login', 'user_nicename', 'display_name', 'user_email'],
+            'search_columns' => $search_columns,
         ]); // @todo: Update this if we plan to use our own User model to handle user related query
     }
 }

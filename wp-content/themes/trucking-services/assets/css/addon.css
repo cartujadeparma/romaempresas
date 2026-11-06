@@ -294,6 +294,7 @@ a.button.button-secondary.premium-btn {
 .notice-get-started-class .admin-content .dashicons{
     vertical-align: middle;
     margin-left: 5px;
+    line-height: 1 !important;
 }
 .notice-get-started-class .notice-dismiss {
     position: absolute;

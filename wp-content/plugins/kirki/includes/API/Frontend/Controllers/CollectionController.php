@@ -109,9 +109,21 @@ class CollectionController extends FrontendRESTController {
 					}
 				}
 			}else {
-				$all_blocks = get_post_meta($post_id, 'kirki', true);
-				$all_styles = Page::get_page_styleblocks($post_id, false);
-				DataHelper::get_data_and_styles_from_root( $collection_data_id, $data_n_styles, $all_blocks['blocks'], $all_styles );
+				// Staging preview sends the version it shows, with the preview nonce. Use that exact
+				// version. Without it (normal visitors), use the published data.
+				$staging_version = isset( $kirki_data['staging_version'] ) ? (int) $kirki_data['staging_version'] : 0;
+				$staging_nonce   = isset( $kirki_data['staging_nonce'] ) ? HelperFunctions::sanitize_text( $kirki_data['staging_nonce'] ) : '';
+				if ( ! $staging_version || ! wp_verify_nonce( $staging_nonce, 'kirki_preview_staging_nonce' ) || ! Page::get_staged_version_info( $post_id, $staging_version ) ) {
+					$staging_version = false;
+				}
+
+				// read_page_meta() reads the published version from post_meta and a staged one
+				// from the staging table.
+				$all_blocks = $staging_version ? Page::read_page_meta( $post_id, 'kirki', $staging_version, null ) : get_post_meta( $post_id, 'kirki', true );
+				$all_styles = Page::get_page_styleblocks( $post_id, $staging_version );
+				if ( is_array( $all_blocks ) && isset( $all_blocks['blocks'] ) ) {
+					DataHelper::get_data_and_styles_from_root( $collection_data_id, $data_n_styles, $all_blocks['blocks'], $all_styles );
+				}
 			}
 		}
 		return $data_n_styles;
@@ -153,17 +165,24 @@ class CollectionController extends FrontendRESTController {
 					'user' => Users::get_user_by_id( absint( $context['id'] ?? 0 ) ),
 				);
 			} elseif ( isset( $context['type'] ) && $context['type'] === 'term' ) {
+				$term    = get_term( absint( $context['id'] ?? 0 ) );
 				$options = array(
-					'term' => get_term( absint( $context['id'] ?? 0 ) )->to_array(),
+					'term' => $term instanceof \WP_Term ? $term->to_array() : null,
 				);
 			} elseif ( isset( $context['type'] ) && $context['type'] === 'comment' ) {
 				$options = array(
 					'post'    => get_post( absint( $context['post_id'] ?? 0 ) ),
 					'comment' => get_comment( absint( $context['comment']['comment_ID'] ?? 0 ) ),
 				);
+			} elseif ( isset( $context['type'] ) && $context['type'] === 'kirki_utility' ) {
+				$options = array(
+					'kirki_utility_page_id' => absint( $context['kirki_utility_page_id'] ?? 0 ),
+				);
 			}
 		}
 
+		// Never merge the raw request context here: only the values resolved above
+		// have passed get_item_permissions_check().
 		$params = array(
 			'blocks'       => $blocks,
 			'style_blocks' => $styles,
@@ -175,8 +194,7 @@ class CollectionController extends FrontendRESTController {
 					'collection_param_filters' => $collection_param_filters,
 					'q'                        => $query,
 				),
-				$options,
-				$context
+				$options
 			),
 			'search_related_collection_ids' => [$collection_id => true],
 		);

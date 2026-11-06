@@ -351,6 +351,7 @@ class KirkiCommentsRest extends WP_REST_Controller
 		$roles = HelperFunctions::get_all_user_roles_by_access_levels(
 			array(
 				KIRKI_ACCESS_LEVELS['FULL_ACCESS'],
+				KIRKI_ACCESS_LEVELS['EDITOR_ACCESS'],
 				KIRKI_ACCESS_LEVELS['CONTENT_ACCESS'],
 				KIRKI_ACCESS_LEVELS['VIEW_ACCESS'],
 			)
@@ -365,8 +366,13 @@ class KirkiCommentsRest extends WP_REST_Controller
 			'order' => 'ASC',
 			'number' => $per_page,
 			'search' => '*' . esc_attr($query) . '*',
-			'search_columns' => array('user_login', 'user_nicename', 'display_name', 'user_email'),
+			'search_columns' => array('user_login', 'user_nicename', 'display_name'),
 		);
+
+		// Searching by email lets anyone guess addresses one character at a time.
+		if (current_user_can('list_users')) {
+			$args['search_columns'][] = 'user_email';
+		}
 
 		$users = get_users($args);
 		$formatted_users = array();
@@ -570,6 +576,7 @@ class KirkiCommentsRest extends WP_REST_Controller
 		return HelperFunctions::has_access(
 			array(
 				KIRKI_ACCESS_LEVELS['FULL_ACCESS'],
+				KIRKI_ACCESS_LEVELS['EDITOR_ACCESS'],
 				KIRKI_ACCESS_LEVELS['CONTENT_ACCESS'],
 				KIRKI_ACCESS_LEVELS['VIEW_ACCESS'],
 			)
@@ -581,6 +588,7 @@ class KirkiCommentsRest extends WP_REST_Controller
 		return HelperFunctions::has_access(
 			array(
 				KIRKI_ACCESS_LEVELS['FULL_ACCESS'],
+				KIRKI_ACCESS_LEVELS['EDITOR_ACCESS'],
 				KIRKI_ACCESS_LEVELS['CONTENT_ACCESS'],
 			)
 		);

@@ -26,6 +26,23 @@ use function Kirki\Framework\dd;
 class Preview extends ExceptionalElements {
 
 	/**
+	 * Element names rendered through the rich-text editor.
+	 *
+	 * Keep this in sync with TEXT_TYPE_ELEMENTS in builder/conf.js.
+	 */
+	private const TEXT_TYPE_ELEMENTS = array(
+		'heading',
+		'link-text',
+		'paragraph',
+		'label',
+		'text',
+		'bold',
+		'break',
+		'italic',
+		'strikethrough',
+	);
+
+	/**
 	 * $root for entry id or parent element id.
 	 */
 	protected $root = null;
@@ -490,6 +507,8 @@ class Preview extends ExceptionalElements {
 				}
 			}
 		}
+		// change all stretch value to -webkit-fill-available;
+		$s = str_replace('stretch', '-webkit-fill-available', $s);
 		return $s;
 	}
 
@@ -1172,19 +1191,20 @@ class Preview extends ExceptionalElements {
 			}
 
 			foreach ( $value as $key => $val ) {
-				$option_type  = $val['type'];
-				$option_value = $val['value'];
+				$option_type   = $val['type'];
+				$option_value  = $val['value'];
+				$dynamic_value = '';
 
 				if ( $option_type === 'text' ) {
 					$seo_value .= $option_value;
 				} elseif ( $option_type === 'post' ) {
 					// post author
 					if ( isset( $post->$option_value ) && $option_value === 'post_author' ) {
-						$seo_value .= get_the_author_meta( 'display_name', $post->post_author );
+						$dynamic_value .= get_the_author_meta( 'display_name', $post->post_author );
 					} elseif ( $option_value === 'post_id' ) {
-						$seo_value .= isset( $post->ID ) ? $post->ID : '';
+						$dynamic_value .= isset( $post->ID ) ? $post->ID : '';
 					} else {
-						$seo_value .= isset( $post->$option_value ) ? $post->$option_value : '';
+						$dynamic_value .= isset( $post->$option_value ) ? $post->$option_value : '';
 					}
 				} elseif ( $option_type === KIRKI_CONTENT_MANAGER_PREFIX . '_field' ) {
 					$meta_key = ContentManagerHelper::get_child_post_meta_key_using_field_id( $post->post_parent, $option_value );
@@ -1196,18 +1216,18 @@ class Preview extends ExceptionalElements {
 						$post_meta_value = $post_meta_value['url'];
 					}
 
-					$seo_value .= wp_strip_all_tags( $post_meta_value );
+					$dynamic_value .= wp_strip_all_tags( $post_meta_value );
 				} elseif ( $option_type === 'featured_image' ) {
-					$seo_value .= get_the_post_thumbnail_url( $post->ID );
+					$dynamic_value .= get_the_post_thumbnail_url( $post->ID );
 				} elseif ( $option_type === 'user' ) {
 					$user_id = HelperFunctions::get_user_id_if_possible_from_url();
 
 					if ( $option_value === 'user_id' ) {
-						$seo_value .= $user_id;
+						$dynamic_value .= $user_id;
 					} elseif ( $option_value === 'user_name' ) {
-						$seo_value .= get_the_author_meta( 'display_name', $user_id );
+						$dynamic_value .= get_the_author_meta( 'display_name', $user_id );
 					} else {
-						$seo_value .= get_the_author_meta( $option_value, $user_id );
+						$dynamic_value .= get_the_author_meta( $option_value, $user_id );
 					}
 				} elseif ( $option_type === 'term' ) {
 					$term_id = HelperFunctions::get_term_id_if_possible_from_url();
@@ -1215,14 +1235,20 @@ class Preview extends ExceptionalElements {
 						$term = get_term( $term_id );
 
 						if ( $option_value === 'term_id' ) {
-							$seo_value .= $term->term_id;
+							$dynamic_value .= $term->term_id;
 						} elseif ( $option_value === 'term_name' ) {
-							$seo_value .= $term->name;
+							$dynamic_value .= $term->name;
 						} elseif ( $option_value === 'term_slug' ) {
-							$seo_value .= $term->slug;
+							$dynamic_value .= $term->slug;
 						}
 					}
 				}
+
+				// Dynamic values come from user-editable data (display_name, bio, term
+				// name, CMS fields…). The assembled string goes through do_shortcode()
+				// below, so strip shortcode brackets from them. Only the admin-authored
+				// 'text' parts may contain shortcodes.
+				$seo_value .= Utils::sanitize_plain_text_input( (string) $dynamic_value );
 			}
 		} else {
 			$seo_value = $value;
@@ -1976,6 +2002,262 @@ class Preview extends ExceptionalElements {
 		return $html;
 	}
 
+	/**
+	 * Determine whether an element uses generated text-list markup.
+	 *
+	 * @param array $this_data Single element data.
+	 * @return bool Whether the element is a supported text list.
+	 */
+	private function is_text_list_element( $this_data ) {
+		return ! empty( $this_data['properties']['isTextList'] ) &&
+			isset( $this_data['name'] ) &&
+			in_array( $this_data['name'], self::TEXT_TYPE_ELEMENTS, true );
+	}
+
+	/**
+	 * Render a text element with list styling as one semantic list.
+	 *
+	 * Text lists deliberately remain paragraph/text elements in the builder data so
+	 * they keep a single layer and editing surface. Line breaks in their rich-text
+	 * contents are the item boundaries, and are materialized as <li> elements only
+	 * when markup is rendered.
+	 *
+	 * @param array $this_data Single element data.
+	 * @param array $options   Element options/dynamic data.
+	 * @return string HTML markup.
+	 */
+	private function generate_text_list_element( $this_data, $options ) {
+		$properties      = $this_data['properties'];
+		$contents        = isset( $properties['contents'] ) && is_array( $properties['contents'] ) ? $properties['contents'] : array( '' );
+		$list_style_type = isset( $properties['listStyleType'] ) && 'decimal' === $properties['listStyleType'] ? 'decimal' : 'disc';
+		$tag             = 'decimal' === $list_style_type ? 'ol' : 'ul';
+		$lines           = array( '' );
+		$source_tag      = isset( $properties['tag'] ) ? $properties['tag'] : '';
+		$href            = $this->get_href_value( $this_data, $options );
+		$has_link        = $href && ( 'a' === $source_tag || isset( $properties['type'] ) );
+		$list_spacing    = $this->get_text_list_spacing_css_value( $properties['listSpacing'] ?? array() );
+
+		foreach ( $contents as $content ) {
+			if ( is_array( $content ) && isset( $content['id'], $this->data[ $content['id'] ] ) ) {
+				$content_element = $this->data[ $content['id'] ];
+				$content_tag     = isset( $content_element['properties']['tag'] ) ? $content_element['properties']['tag'] : '';
+				$is_break       = 'break' === ( $content_element['name'] ?? '' ) || 'br' === $content_tag;
+
+				if ( $is_break ) {
+					$lines[] = '';
+					continue;
+				}
+
+				$lines[ count( $lines ) - 1 ] .= $this->recGenHTML( $content['id'], $options );
+				continue;
+			}
+
+			if ( is_string( $content ) ) {
+				$content_lines = preg_split( '/\r\n|\r|\n/', $content );
+				foreach ( $content_lines as $line_index => $content_line ) {
+					if ( $line_index > 0 ) {
+						$lines[] = '';
+					}
+					$lines[ count( $lines ) - 1 ] .= htmlspecialchars( $content_line );
+				}
+			}
+		}
+
+		$list_data = $this_data;
+		if ( isset( $list_data['properties']['attributes'] ) ) {
+			unset(
+				$list_data['properties']['attributes']['href'],
+				$list_data['properties']['attributes']['target'],
+				$list_data['properties']['attributes']['rel']
+			);
+		}
+		$list_data['properties']['attributes']['role'] = 'list';
+
+		$list_style      = 'list-style-type:' . $list_style_type . ';list-style-position:inside;margin-top:0;margin-bottom:0;padding-left:0;';
+		$attributes      = $this->append_inline_style( $this->getAllAttributes( $list_data ), $list_style );
+		$link_attributes = $has_link ? $this->get_text_list_link_attributes( $this_data, $href, $options ) : '';
+		$html             = '<' . $tag . ' ' . $attributes . '>';
+
+		$last_line_index = count( $lines ) - 1;
+		foreach ( $lines as $line_index => $line ) {
+			$item_content = '' !== $line ? $line : '<br>';
+			if ( $has_link ) {
+				$item_content = '<a ' . $link_attributes . '>' . $item_content . '</a>';
+			}
+			$item_spacing = $line_index === $last_line_index ? '0px' : $list_spacing;
+			$html        .= '<li style="margin-bottom:' . $item_spacing . ';padding-left:1.4em;text-indent:-1.4em;">' . $item_content . '</li>';
+		}
+
+		$html .= '</' . $tag . '>';
+		if ( 'link-text' === $this_data['name'] && $href ) {
+			$html .= $this->get_preload_link( $href, $this_data );
+		}
+
+		return $html;
+	}
+
+	/**
+	 * Return a safe CSS value for the space between generated list items.
+	 *
+	 * @param array $spacing Stored list spacing value and unit.
+	 * @return string CSS spacing value.
+	 */
+	private function get_text_list_spacing_css_value( $spacing ) {
+		$value = isset( $spacing['value'] ) && is_numeric( $spacing['value'] ) ? max( 0, (float) $spacing['value'] ) : 0;
+		$unit  = isset( $spacing['unit'] ) && preg_match( '/^[a-z%]+$/i', $spacing['unit'] ) ? $spacing['unit'] : 'px';
+
+		return $value . $unit;
+	}
+
+	/**
+	 * Return the normalized paragraph spacing for an element.
+	 *
+	 * @param array $this_data Element data.
+	 * @return string CSS spacing value, or an empty string when unavailable.
+	 */
+	private function get_paragraph_spacing_css_value( $this_data ) {
+		$properties = $this_data['properties'] ?? array();
+		if ( ! empty( $properties['isTextList'] ) || ! isset( $properties['paragraphSpacing'] ) ) {
+			return '';
+		}
+
+		$spacing       = $properties['paragraphSpacing'];
+		$value         = isset( $spacing['value'] ) && is_numeric( $spacing['value'] )
+			? max( 0, (float) $spacing['value'] )
+			: 0;
+		$allowed_units = array( 'px', 'rem', '%', 'vh', 'vw', 'pt', 'em' );
+		$unit          = isset( $spacing['unit'] ) && in_array( $spacing['unit'], $allowed_units, true )
+			? $spacing['unit']
+			: 'px';
+
+		return $value . $unit;
+	}
+
+	/**
+	 * Determine whether a rich-text content item is a paragraph boundary.
+	 *
+	 * @param mixed $content Content item.
+	 * @return bool Whether the item is a break.
+	 */
+	private function is_rich_text_paragraph_break( $content ) {
+		if ( ! is_array( $content ) ) {
+			return false;
+		}
+		if ( 'break' === ( $content['type'] ?? '' ) ) {
+			return true;
+		}
+
+		$content_id = $content['id'] ?? '';
+		return $content_id && 'break' === ( $this->data[ $content_id ]['name'] ?? '' );
+	}
+
+	/**
+	 * Render stored rich-text contents as structural paragraph blocks.
+	 *
+	 * @param array  $contents Rich-text contents.
+	 * @param array  $options  Dynamic rendering options.
+	 * @param string $spacing  CSS spacing value.
+	 * @return string Paragraph markup.
+	 */
+	private function render_rich_text_paragraphs( $contents, $options, $spacing ) {
+		$paragraphs = array( array() );
+
+		foreach ( $contents as $content ) {
+			if ( is_string( $content ) ) {
+				$parts = preg_split( '/\r\n|\r|\n/', $content );
+				foreach ( $parts as $index => $part ) {
+					if ( '' !== $part ) {
+						$paragraphs[ count( $paragraphs ) - 1 ][] = $part;
+					}
+					if ( $index < count( $parts ) - 1 ) {
+						$paragraphs[] = array();
+					}
+				}
+				continue;
+			}
+
+			if ( $this->is_rich_text_paragraph_break( $content ) ) {
+				$paragraphs[] = array();
+				continue;
+			}
+
+			$paragraphs[ count( $paragraphs ) - 1 ][] = $content;
+		}
+
+		$html            = '';
+		$paragraph_count = count( $paragraphs );
+		foreach ( $paragraphs as $paragraph_index => $paragraph ) {
+			$gap   = $paragraph_index < $paragraph_count - 1 ? $spacing : '0px';
+			$html .= '<span data-rich-text-paragraph="true" style="display:block;margin-top:0;margin-bottom:' . esc_attr( $gap ) . ';">';
+
+			if ( empty( $paragraph ) ) {
+				$html .= '<br data-rich-text-padding="true"/>';
+			} else {
+				foreach ( $paragraph as $item ) {
+					if ( is_string( $item ) ) {
+						$html .= htmlspecialchars( $item );
+					} elseif ( ! empty( $item['id'] ) ) {
+						$html .= $this->recGenHTML( $item['id'], $options );
+					}
+				}
+			}
+
+			$html .= '</span>';
+		}
+
+		return $html;
+	}
+
+	/**
+	 * Build the anchor attributes for a linked text list item.
+	 *
+	 * @param array  $this_data Single element data.
+	 * @param string $href      Resolved link URL.
+	 * @param array  $options   Element options/dynamic data.
+	 * @return string Anchor attribute string.
+	 */
+	private function get_text_list_link_attributes( $this_data, $href, $options ) {
+		$properties = $this_data['properties'];
+		$attributes = 'href="' . esc_attr( $href ) . '"';
+
+		if ( ! empty( $properties['attributes']['target'] ) ) {
+			$attributes .= ' target="' . esc_attr( $properties['attributes']['target'] ) . '"';
+		}
+
+		if ( ! empty( $properties['attributes']['rel'] ) ) {
+			$rel = is_array( $properties['attributes']['rel'] )
+				? implode( ' ', $properties['attributes']['rel'] )
+				: $properties['attributes']['rel'];
+			$attributes .= ' rel="' . esc_attr( $rel ) . '"';
+		}
+
+		return $this->add_link_active_class( $href, $attributes, $this_data, $options );
+	}
+
+	/**
+	 * Add declarations to an existing HTML attribute string without emitting a
+	 * second style attribute.
+	 *
+	 * @param string $attributes Attribute string.
+	 * @param string $style      CSS declarations.
+	 * @return string Updated attribute string.
+	 */
+	private function append_inline_style( $attributes, $style ) {
+		if ( preg_match( '/(?:^|\s)style="([^"]*)"/i', $attributes ) ) {
+			return preg_replace_callback(
+				'/(^|\s)style="([^"]*)"/i',
+				function ( $matches ) use ( $style ) {
+					$separator = '' !== trim( $matches[2] ) && ';' !== substr( rtrim( $matches[2] ), -1 ) ? ';' : '';
+					return $matches[1] . 'style="' . $matches[2] . $separator . $style . '"';
+				},
+				$attributes,
+				1
+			);
+		}
+
+		return $attributes . ' style="' . $style . '"';
+	}
+
 	public function get_child_content_or_childrens( $this_data, $options ) {
 		$html = '';
 		if ( ! isset( $this_data['children'] ) ) {
@@ -2009,6 +2291,9 @@ class Preview extends ExceptionalElements {
 	 */
 	private function print_content( $this_data, $options ) {
 		$html            = '';
+		if(!$this_data || !isset($this_data['properties'])){
+			return $html;
+		}
 		$properties      = $this_data['properties'];
 		$content         = isset( $properties['contents'] ) ? $properties['contents'] : '';
 		$dynamic_content = isset( $properties['dynamicContent'] ) ? $properties['dynamicContent'] : false;
@@ -2016,8 +2301,13 @@ class Preview extends ExceptionalElements {
 
 		if ( $dynamic_content ) {
 			$html = Utils::getDynamicRichTextValue( $dynamic_content, $options );
+		} elseif ( $this->is_text_list_element( $this_data ) ) {
+			return $this->generate_text_list_element( $this_data, $options );
 		} else {
-			if ( is_array( $content ) ) {
+			$paragraph_spacing = $this->get_paragraph_spacing_css_value( $this_data );
+			if ( is_array( $content ) && '' !== $paragraph_spacing && (float) $paragraph_spacing > 0 ) {
+				$html = $this->render_rich_text_paragraphs( $content, $options, $paragraph_spacing );
+			} elseif ( is_array( $content ) ) {
 				$content_count = count( $content );
 				for ( $i = 0; $i < $content_count; $i++ ) {
 					if ( is_array( $content[ $i ] ) ) {
@@ -2051,7 +2341,7 @@ class Preview extends ExceptionalElements {
 			}
 
 			if ( isset( $properties['type'] ) ) {
-				$html = "<a href='{$href}' {$target} {$rel}>{$html}</a>";
+				$html = "<a href='" . esc_url( $href ) . "' {$target} {$rel}>{$html}</a>";
 			}
 		}
 
@@ -2059,6 +2349,9 @@ class Preview extends ExceptionalElements {
 	}
 
 	public function get_href_value( $this_data, $options = array() ) {
+		if(!$this_data || !isset($this_data['properties']) || !isset($this_data['name'])){
+			return '';
+		}
 		$name            = $this_data['name'];
 		$properties      = $this_data['properties'];
 		$dynamic_content = isset( $properties['dynamicContent'] ) ? $properties['dynamicContent'] : false;
@@ -2084,8 +2377,9 @@ class Preview extends ExceptionalElements {
 					}
 					$content = apply_filters( 'kirki_dynamic_content', false, $contentInfo );
 					if ( $content ) {
-						// Plain-text dynamic values (comment fields) are visitor supplied,
-						// so they are never trusted as a URL here.
+						// Plain-text dynamic values (comment, user, author fields)
+						// are visitor/user supplied, so they are never trusted
+						// as a URL here.
 						if ( is_string( $content ) && in_array( $dynamic_content['type'] ?? '', Utils::get_plain_text_dynamic_content_types(), true ) ) {
 							return esc_url( html_entity_decode( $content, ENT_QUOTES | ENT_HTML5, 'UTF-8' ) );
 						}
@@ -2114,13 +2408,18 @@ class Preview extends ExceptionalElements {
 					} elseif ( $dynamic_content['type'] === 'menu' && isset( $options['menu'], $options['menu']->{$dynamic_content['value']} ) ) {
 						$href = $options['menu']->{$dynamic_content['value']};
 					} elseif ( $dynamic_content['type'] === 'user' && isset( $options['user'], $options['user'][ $dynamic_content['value'] ] ) ) {
-						$href = $options['user'][ $dynamic_content['value'] ];
+						$href = esc_url( $options['user'][ $dynamic_content['value'] ] );
 						// $href = $options['post']->{$dynamic_content['value']};
 					} else {
 						$itemType = $dynamic_content['type'];
 						if ( isset( $options[ $itemType ] ) ) {
 							$data  = $options[ $itemType ] ?? array();
 							$value = isset( $data[ $dynamic_content['value'] ] ) ? $data[ $dynamic_content['value'] ] : '';
+							// User/author/comment values must never break out of
+							// the href attribute.
+							if ( is_string( $value ) && in_array( $itemType, Utils::get_plain_text_dynamic_content_types(), true ) ) {
+								$value = esc_url( html_entity_decode( $value, ENT_QUOTES | ENT_HTML5, 'UTF-8' ) );
+							}
 							$href  = $value;
 						}
 					}
@@ -2317,6 +2616,13 @@ class Preview extends ExceptionalElements {
 			if ( $this_element['name'] === 'image' && isset( $attributes['width'] ) ) {
 				unset( $attributes['width'] );
 			}
+			// allow floating point values for number type input
+			if ( $this_element['name'] === 'input' &&
+				isset( $attributes['type'] ) && $attributes['type'] === 'number' &&
+				! isset( $attributes['step'] )
+			) {
+				$attributes['step'] = 'any';
+			}
 
 			$others_attributes = array_map(
 				function ( $value, $key ) use ( $element_name ) {
@@ -2463,7 +2769,7 @@ class Preview extends ExceptionalElements {
 			for ( $i = 0; $i < $style_ids_count; $i++ ) {
 				$style_id = $style_ids[ $i ];
 				$s_block  = isset( $this->style_blocks[ $style_id ] ) ? $this->style_blocks[ $style_id ] : null;
-				if ( ! isset( $s_block ) ) {
+				if ( ! isset( $s_block, $s_block['name'] ) ) {
 					continue;
 				}
 				$this->add_to_only_used_style_blocks( $s_block );
