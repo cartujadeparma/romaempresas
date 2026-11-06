@@ -29,7 +29,7 @@
 
 <!-- wp:navigation-link {"label":"Contact","url":"#","kind":"custom","isTopLevelLink":true} /-->
 
-<!-- wp:navigation-link {"label":"Buy Now","opensInNewTab":true,"url":"https://www.theclassictemplates.com/products/trucking-wordpress-theme","kind":"custom","isTopLevelLink":true} /-->
+<!-- wp:navigation-link {"label":"Buy Now","opensInNewTab":true,"url":"https://www.theclassictemplates.com/products/trucking-WordPress-theme","kind":"custom","isTopLevelLink":true} /-->
 
 <!-- /wp:navigation --></div>
 <!-- /wp:column -->

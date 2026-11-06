@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Trucking Services 0.1.5\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/trucking-services\n"
+"Report-Msgid-Bugs-To: https://WordPress.org/support/theme/trucking-services\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -40,7 +40,7 @@ msgid "https://www.theclassictemplates.com/"
 msgstr ""
 
 #: functions.php:59
-msgid "https://www.theclassictemplates.com/products/trucking-wordpress-theme"
+msgid "https://www.theclassictemplates.com/products/trucking-WordPress-theme"
 msgstr ""
 
 #: functions.php:62
@@ -49,15 +49,15 @@ msgid "About Trucking Services"
 msgstr ""
 
 #: functions.php:65
-msgid "https://www.theclassictemplates.com/collections/best-wordpress-templates"
+msgid "https://www.theclassictemplates.com/collections/best-WordPress-templates"
 msgstr ""
 
 #: functions.php:68
-msgid "https://wordpress.org/support/theme/trucking-services/"
+msgid "https://WordPress.org/support/theme/trucking-services/"
 msgstr ""
 
 #: functions.php:71
-msgid "https://wordpress.org/support/theme/trucking-services/reviews/"
+msgid "https://WordPress.org/support/theme/trucking-services/reviews/"
 msgstr ""
 
 #: functions.php:74
@@ -69,7 +69,7 @@ msgid "https://live.theclassictemplates.com/demo/docs/trucking-services-free/"
 msgstr ""
 
 #: functions.php:80
-msgid "https://www.theclassictemplates.com/products/wordpress-theme-bundle"
+msgid "https://www.theclassictemplates.com/products/WordPress-theme-bundle"
 msgstr ""
 
 #. translators: 1: Theme name.

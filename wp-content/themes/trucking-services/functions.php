@@ -2,7 +2,7 @@
 /**
  * Trucking Services functions and definitions
  *
- * @link https://developer.wordpress.org/themes/basics/theme-functions/
+ * @link https://developer.WordPress.org/themes/basics/theme-functions/
  *
  * @subpackage Trucking Services
  * @since Trucking Services 1.0
@@ -56,19 +56,19 @@ add_action('enqueue_block_assets', 'trucking_services_block_assets');
 
 function trucking_services_setup_theme() {
 	if ( ! defined( 'TRUCKING_SERVICES_PREMIUM_PAGE' ) ) {
-		define('TRUCKING_SERVICES_PREMIUM_PAGE',__('https://www.theclassictemplates.com/products/trucking-wordpress-theme','trucking-services'));
+		define('TRUCKING_SERVICES_PREMIUM_PAGE',__('https://www.theclassictemplates.com/products/trucking-WordPress-theme','trucking-services'));
 	}
 	if ( ! defined( 'TRUCKING_SERVICES_PRO_NAME' ) ) {
 		define( 'TRUCKING_SERVICES_PRO_NAME', __( 'About Trucking Services', 'trucking-services' ));
 	}
 	if ( ! defined( 'TRUCKING_SERVICES_THEME_PAGE' ) ) {
-		define('TRUCKING_SERVICES_THEME_PAGE',__('https://www.theclassictemplates.com/collections/best-wordpress-templates','trucking-services'));
+		define('TRUCKING_SERVICES_THEME_PAGE',__('https://www.theclassictemplates.com/collections/best-WordPress-templates','trucking-services'));
 	}
 	if ( ! defined( 'TRUCKING_SERVICES_SUPPORT' ) ) {
-		define('TRUCKING_SERVICES_SUPPORT',__('https://wordpress.org/support/theme/trucking-services/','trucking-services'));
+		define('TRUCKING_SERVICES_SUPPORT',__('https://WordPress.org/support/theme/trucking-services/','trucking-services'));
 	}
 	if ( ! defined( 'TRUCKING_SERVICES_REVIEW' ) ) {
-		define('TRUCKING_SERVICES_REVIEW',__('https://wordpress.org/support/theme/trucking-services/reviews/','trucking-services'));
+		define('TRUCKING_SERVICES_REVIEW',__('https://WordPress.org/support/theme/trucking-services/reviews/','trucking-services'));
 	}
 	if ( ! defined( 'TRUCKING_SERVICES_PRO_DEMO' ) ) {
 		define('TRUCKING_SERVICES_PRO_DEMO',__('https://live.theclassictemplates.com/trucking-services-pro/','trucking-services'));
@@ -77,7 +77,7 @@ function trucking_services_setup_theme() {
 		define('TRUCKING_SERVICES_THEME_DOCUMENTATION',__('https://live.theclassictemplates.com/demo/docs/trucking-services-free/','trucking-services'));
 	}
 	if ( ! defined( 'TRUCKING_SERVICES_BUNDLE_PAGE' ) ) {
-		define('TRUCKING_SERVICES_BUNDLE_PAGE',__('https://www.theclassictemplates.com/products/wordpress-theme-bundle','trucking-services'));
+		define('TRUCKING_SERVICES_BUNDLE_PAGE',__('https://www.theclassictemplates.com/products/WordPress-theme-bundle','trucking-services'));
 	}
 }
 add_action('after_setup_theme', 'trucking_services_setup_theme');
